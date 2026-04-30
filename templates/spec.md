@@ -23,6 +23,11 @@ Relevant product, codebase, user, or workflow context.
 - Decision:
   Reason:
 
+## AI Behavior
+
+If this feature uses LLMs, RAG, tools, workflows, or agents, create
+`templates/ai-system-spec.md` alongside this spec.
+
 ## Invariants
 
 What must not break?

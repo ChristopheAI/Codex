@@ -24,10 +24,11 @@ For every new project:
 2. Fill in `templates/project-brief.md` and save it as `docs/project-brief.md`.
 3. Adapt `AGENTS.md` to the project using the brief as source of truth.
 4. Write a spec when decisions matter.
-5. Break the work into small reviewable tasks.
-6. Give each task a verification command.
-7. Build with Codex.
-8. Test, review, commit, and reflect before moving on.
+5. Use the AI system spec when the project includes LLMs, RAG, tools, or agents.
+6. Break the work into small reviewable tasks.
+7. Give each task a verification command.
+8. Build with Codex.
+9. Test, review, commit, and reflect before moving on.
 
 See [docs/new-project.md](docs/new-project.md) for the exact start sequence.
 
@@ -66,9 +67,11 @@ examples/                 Filled-in examples of the starter workflow
 - Starter kit first, learnings second, portfolio third.
 - Prefer principles over tool tricks.
 - Use specs when decisions matter.
+- Use the simplest AI pattern that solves the problem.
 - Slice work into one-outcome tasks.
 - Keep agent instructions compact.
 - Give agents concrete verification commands.
+- Evaluate AI quality with tests, manual examples, and traces.
 - Review AI-generated code like code from a junior engineer.
 - Ship small vertical slices.
 - Reflect after each project and improve the workflow.

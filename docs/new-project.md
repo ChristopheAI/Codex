@@ -61,6 +61,10 @@ Use `templates/spec.md` when the task includes decisions about:
 
 Skip the spec for tiny, obvious changes.
 
+If the project uses LLMs, RAG, tool calling, workflows, or agents, also use
+`templates/ai-system-spec.md`. Start from `docs/ai-system-defaults.md` and
+choose the simplest pattern that solves the problem.
+
 ## Step 4: Plan The First Slice
 
 Use `templates/plan.md` when the work needs multiple steps.

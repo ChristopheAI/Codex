@@ -43,10 +43,12 @@ Goal: add reusable defaults for common AI application patterns.
 - RAG with PostgreSQL and pgvector.
 - Intent classification and routing.
 - Streaming responses.
+- Evals and observability defaults.
 
 Evidence:
 
 - Starter templates and examples cover the first AI system pattern.
+- `docs/ai-system-defaults.md` guides pattern choice before implementation.
 
 ## Phase 4: Production Readiness
 

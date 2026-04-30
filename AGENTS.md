@@ -46,6 +46,10 @@ Use the lightest useful process:
 - Each task should have one outcome, no more than three acceptance criteria, a
   concrete verify command, and explicit out-of-scope boundaries.
 - Repeated corrections should become reusable project rules in `AGENTS.md`.
+- AI projects should use `docs/ai-system-defaults.md` and
+  `templates/ai-system-spec.md` before implementation.
+- Prefer the simplest AI pattern that works: SDK call, then workflow, then
+  agent only when the path is genuinely unknown.
 - Learnings should end with a concrete change to templates, docs, workflow, or
   project practice.
 
@@ -88,5 +92,7 @@ guessing, looping, or expanding scope, stop and improve the spec or task.
 - Reviews should prioritize correctness, scope control, security, and hidden
   contract changes.
 - Hooks should enforce checks that the agent must not skip.
+- AI systems should define observability, evals, and no-answer behavior before
+  production use.
 - Reflection notes should capture what changed in the workflow, not just what
   was built.
