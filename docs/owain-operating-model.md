@@ -1,7 +1,7 @@
 # Owain Lewis Operating Model
 
-This note captures the workflow patterns to learn from Owain Lewis and adapt
-inside this repository.
+This note captures workflow patterns to learn from Owain Lewis and adapt into
+this repository as reusable project-starting defaults.
 
 ## Core Idea
 
@@ -101,10 +101,11 @@ This is advanced. The foundation is still good task shape and verification.
 
 ## Adaptation For This Repo
 
-This repository should become the local version of that operating model:
+This repository should become the reusable starter-kit version of that
+operating model:
 
 - `AGENTS.md` defines how Codex works here.
-- `templates/` contains reusable task inputs.
-- `docs/` captures stable principles.
-- `learnings/` turns consumed material into decisions.
-- `projects/` proves the learning through shipped systems.
+- `templates/` contains reusable project-starting inputs.
+- `docs/` captures stable project workflow.
+- `learnings/` turns consumed material into starter-kit improvements.
+- `projects/` proves the workflow through shipped systems.

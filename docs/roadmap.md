@@ -1,21 +1,22 @@
-# AI Engineer Roadmap
+# Starter Kit Roadmap
 
-This roadmap turns learning into shipped evidence.
+This roadmap turns the repo into a reusable starting point for new AI and
+software projects.
 
-## Phase 1: Codex Workflow Foundation
+## Phase 1: Starter Kit Foundation
 
-Goal: become fluent with Codex as an engineering partner.
+Goal: make the repo useful as the default base for any new project.
 
 - Set up `AGENTS.md`.
-- Create spec, plan, and review templates.
-- Practice small tasks with explicit verification.
+- Create project brief, spec, plan, and review templates.
+- Document the new-project workflow.
+- Keep learnings secondary to starter-kit improvements.
 - Learn local vs worktree workflows.
-- Start recording reflection notes.
 
 Evidence:
 
-- This repo has a clear operating structure.
-- Every non-trivial change has a plan or review trail.
+- A new project can be started from this repo without reinventing process.
+- The first project brief can be filled in from a template.
 
 ## Phase 2: Software Engineering Discipline
 
@@ -31,9 +32,9 @@ Evidence:
 
 - A small app built through spec -> plan -> build -> review.
 
-## Phase 3: AI System Fundamentals
+## Phase 3: AI Project Defaults
 
-Goal: build real AI application patterns from first principles.
+Goal: add reusable defaults for common AI application patterns.
 
 - Model calls and structured outputs.
 - Tool calling.
@@ -44,11 +45,11 @@ Goal: build real AI application patterns from first principles.
 
 Evidence:
 
-- First working RAG or agent project in `projects/`.
+- Starter templates and examples cover the first AI system pattern.
 
 ## Phase 4: Production Readiness
 
-Goal: move from demo to deployable system.
+Goal: make the starter kit production-minded by default.
 
 - Environment configuration.
 - Deployment target.

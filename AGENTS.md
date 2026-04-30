@@ -1,11 +1,15 @@
-# Codex AI Engineering OS
+# Codex Project Starter Kit
 
-This repo is Christophe's personal AI engineering operating system.
+This repo is Christophe's reusable starter kit for AI and software projects
+built with Codex.
 
 ## Goal
 
-Use Codex to learn and practice professional AI engineering: specs, planning,
-implementation, testing, review, deployment, and reflection.
+Make every new project start with a strong default workflow: brief, spec, plan,
+build, test, review, ship, and reflect.
+
+Learning notes are secondary. They should improve the starter kit or future
+project execution.
 
 ## Workflow
 
@@ -25,10 +29,21 @@ Use the lightest useful process:
 
 ## Repository Structure
 
-- `docs/`: durable operating models, roadmaps, and design notes.
+- `docs/`: starter workflow, operating models, roadmaps, and durable notes.
 - `templates/`: reusable task, spec, plan, and review templates.
-- `learnings/`: synthesized lessons from courses, videos, Skool, and practice.
+- `learnings/`: synthesized lessons that improve the starter kit.
 - `projects/`: real AI systems and exercises built end to end.
+
+## Starter Kit Rules
+
+- A new project begins with `templates/project-brief.md`.
+- `AGENTS.md` should be copied and adapted for project-specific context.
+- Specs are required when behavior, architecture, data shape, deployment, or
+  failure handling has decisions worth reviewing.
+- Plans should split work into small tasks that Codex can execute, a human can
+  review, and Git can roll back.
+- Learnings should end with a concrete change to templates, docs, workflow, or
+  project practice.
 
 ## Style
 

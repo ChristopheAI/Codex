@@ -1,17 +1,31 @@
-# Codex AI Engineering OS
+# Codex Project Starter Kit
 
-This repository is my working system for becoming a real AI engineer with
-Codex as the execution partner.
+This repository is my reusable starting point for new AI and software projects
+built with Codex.
 
-It is not a notebook of random prompts. It is a place to capture principles,
-workflows, templates, and shipped projects.
+It is not primarily a notes repo. Notes are useful only when they improve the
+starter kit, the workflow, or the quality of future projects.
 
 ## Purpose
 
-- Learn Codex deeply by using it on real software work.
-- Turn AI engineering lessons into reusable operating procedures.
+- Start new projects with a professional Codex-ready structure.
+- Reuse the same spec, plan, review, and project brief workflow every time.
+- Turn AI engineering lessons into reusable project defaults.
 - Build production-minded AI systems, not tutorial-only demos.
-- Keep evidence of progress in public, reviewable project artifacts.
+
+## How This Repo Should Be Used
+
+For every new project:
+
+1. Start from this repository structure.
+2. Fill in `templates/project-brief.md`.
+3. Adapt `AGENTS.md` to the project.
+4. Write a spec when decisions matter.
+5. Break the work into small reviewable tasks.
+6. Build with Codex.
+7. Test, review, and reflect before moving on.
+
+See [docs/starter-kit.md](docs/starter-kit.md) for the full starter workflow.
 
 ## Operating Model
 
@@ -28,22 +42,23 @@ hold the output to professional software standards.
 ## Repository Map
 
 ```text
-AGENTS.md                 Project instructions for Codex
-docs/                     Operating models, roadmaps, and durable notes
-templates/                Reusable specs, plans, and review checklists
-learnings/                Synthesis from Owain, Skool, videos, and practice
-projects/                 Real AI engineering projects built end to end
+AGENTS.md                 Base instructions for Codex
+docs/                     Starter workflow, roadmap, operating models
+templates/                Project brief, specs, plans, review checklists
+learnings/                Supporting synthesis that improves the starter kit
+projects/                 Example or proof projects built end to end
 ```
 
 ## Current Focus
 
-1. Build a solid Codex workflow.
-2. Convert Owain's AI Engineer material into practical engineering routines.
-3. Ship the first small production-style AI system.
-4. Add evaluation, observability, deployment, and client-ready polish.
+1. Make this repo a reliable starter kit for every new project.
+2. Convert Owain's AI Engineer material into practical engineering defaults.
+3. Add example projects that prove the workflow works.
+4. Add deployment, eval, observability, and client-ready patterns over time.
 
 ## Principles
 
+- Starter kit first, learnings second, portfolio third.
 - Prefer principles over tool tricks.
 - Use specs when decisions matter.
 - Keep agent instructions compact.
