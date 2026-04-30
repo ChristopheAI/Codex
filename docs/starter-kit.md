@@ -6,18 +6,26 @@ default process.
 The goal is not to collect notes. The goal is to make better projects easier to
 start.
 
+## First Principle
+
+The first artifact is the project brief.
+
+Do not begin by asking Codex to build. Begin by deciding what should be true
+when the project works.
+
 ## When Starting A New Project
 
 1. Create a new repo or folder from this starter kit.
-2. Copy or adapt `AGENTS.md`.
-3. Fill in `templates/project-brief.md`.
-4. Decide whether the first task needs a spec.
-5. Use `templates/spec.md` for decisions, invariants, data shapes, or failure
+2. Copy `templates/project-brief.md` to `docs/project-brief.md`.
+3. Fill in the project brief.
+4. Adapt `AGENTS.md` from that brief.
+5. Decide whether the first task needs a spec.
+6. Use `templates/spec.md` for decisions, invariants, data shapes, or failure
    behavior.
-6. Use `templates/plan.md` when the work needs multiple small tasks.
-7. Build with Codex.
-8. Review with `templates/review-checklist.md`.
-9. Record only the learnings that should change future project defaults.
+7. Use `templates/plan.md` when the work needs multiple small tasks.
+8. Build with Codex.
+9. Review with `templates/review-checklist.md`.
+10. Record only the learnings that should change future project defaults.
 
 ## Bootstrap Checklist
 
@@ -36,6 +44,9 @@ Minimum:
 
 ```text
 AGENTS.md
+docs/new-project.md
+scripts/new-project.sh
+scripts/validate-starter.sh
 templates/project-brief.md
 templates/spec.md
 templates/plan.md

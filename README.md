@@ -15,17 +15,20 @@ starter kit, the workflow, or the quality of future projects.
 
 ## How This Repo Should Be Used
 
+The first move is always the project brief. Do not start by asking Codex to
+build the app.
+
 For every new project:
 
 1. Start from this repository structure.
-2. Fill in `templates/project-brief.md`.
-3. Adapt `AGENTS.md` to the project.
+2. Fill in `templates/project-brief.md` and save it as `docs/project-brief.md`.
+3. Adapt `AGENTS.md` to the project using the brief as source of truth.
 4. Write a spec when decisions matter.
 5. Break the work into small reviewable tasks.
 6. Build with Codex.
 7. Test, review, and reflect before moving on.
 
-See [docs/starter-kit.md](docs/starter-kit.md) for the full starter workflow.
+See [docs/new-project.md](docs/new-project.md) for the exact start sequence.
 
 ## Operating Model
 
@@ -43,10 +46,11 @@ hold the output to professional software standards.
 
 ```text
 AGENTS.md                 Base instructions for Codex
-docs/                     Starter workflow, roadmap, operating models
+docs/                     New-project workflow, roadmap, operating models
 templates/                Project brief, specs, plans, review checklists
 learnings/                Supporting synthesis that improves the starter kit
 projects/                 Example or proof projects built end to end
+examples/                 Filled-in examples of the starter workflow
 ```
 
 ## Current Focus

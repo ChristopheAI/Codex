@@ -36,14 +36,25 @@ Use the lightest useful process:
 
 ## Starter Kit Rules
 
-- A new project begins with `templates/project-brief.md`.
-- `AGENTS.md` should be copied and adapted for project-specific context.
+- A new project begins with a filled `docs/project-brief.md`.
+- Do not ask Codex to build before the project brief is clear.
+- `AGENTS.md` should be adapted from the project brief, not from vibes.
 - Specs are required when behavior, architecture, data shape, deployment, or
   failure handling has decisions worth reviewing.
 - Plans should split work into small tasks that Codex can execute, a human can
   review, and Git can roll back.
 - Learnings should end with a concrete change to templates, docs, workflow, or
   project practice.
+
+## New Project Sequence
+
+1. Copy `templates/project-brief.md` to `docs/project-brief.md`.
+2. Fill in the brief before coding.
+3. Update `AGENTS.md` so Codex understands the project.
+4. Create a spec only for decisions that need review.
+5. Create a small task plan.
+6. Build the first vertical slice.
+7. Verify and review before expanding scope.
 
 ## Style
 
