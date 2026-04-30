@@ -30,8 +30,12 @@ Good for:
 The review loop is:
 
 ```text
-brief -> plan -> worktree task -> diff review -> verification -> merge/commit
+brief -> spec -> task -> think first -> implement -> verify -> review -> commit
 ```
+
+Only run multiple worktrees in parallel when the tasks are independent, do not
+touch the same files, and do not depend on an early foundation that is still
+changing.
 
 ## First Prompt For A New Project
 
@@ -44,12 +48,38 @@ Do not write code yet.
 
 This keeps Codex in engineering mode instead of jumping straight to generation.
 
+## Think-First Prompt For A Task
+
+Use this before implementation when a task touches multiple files, has
+tradeoffs, or could be interpreted in more than one way.
+
+```text
+Read AGENTS.md, docs/project-brief.md, the active spec, and the current task.
+Tell me what you will change, what you will not touch, and how you will verify it.
+Do not implement yet.
+```
+
 ## Review Prompt
 
 ```text
 Review the current diff against docs/project-brief.md and the active spec.
 Focus on correctness, scope creep, missing tests, error behavior, and hidden
 contract changes. Findings first.
+```
+
+Use fresh review for non-trivial work. The implementing agent should self-review
+first, then a human or separate reviewer agent should review the diff with less
+context bias.
+
+## Verification Commands
+
+Every project should list its real verification commands in `AGENTS.md`.
+
+For this starter kit:
+
+```bash
+sh scripts/validate-starter.sh
+git diff --check
 ```
 
 ## Expansion Rule

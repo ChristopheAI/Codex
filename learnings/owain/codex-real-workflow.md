@@ -13,7 +13,7 @@ workflow.
 The real leverage comes from shaping the work:
 
 ```text
-ticket -> context -> plan -> implementation -> diff review -> verification -> PR
+ticket -> context -> spec -> task -> implementation -> verification -> review -> PR
 ```
 
 ## What Matters
@@ -22,7 +22,10 @@ ticket -> context -> plan -> implementation -> diff review -> verification -> PR
 - Keep instructions short and high-signal.
 - Use local mode for small supervised changes.
 - Use worktrees for isolated parallel work.
+- Give every task one outcome and a concrete verification command.
+- Treat hooks as deterministic quality gates when checks must run.
 - Review diffs like a real code review.
+- Use a fresh reviewer for non-trivial generated code.
 - Use comments and iteration instead of accepting whole outputs blindly.
 - Use plugins when they remove context switching.
 - Use automations for repeatable maintenance.

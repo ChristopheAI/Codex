@@ -27,10 +27,11 @@ Goal: use AI without skipping engineering judgment.
 - Add meaningful tests.
 - Review generated code before accepting it.
 - Keep commits scoped and readable.
+- Add hooks or repeatable checks where agents must not skip verification.
 
 Evidence:
 
-- A small app built through spec -> plan -> build -> review.
+- A small app built through spec -> task -> verify -> review -> commit.
 
 ## Phase 3: AI Project Defaults
 

@@ -1,0 +1,118 @@
+# Codex Implementation Loop
+
+This is the default loop once a project brief, spec, and task are clear.
+
+## Core Loop
+
+```text
+task -> think first -> implement -> verify -> self-review -> human/reviewer review -> commit
+```
+
+Codex is the execution layer. The workflow is the product discipline around it.
+
+## Good Delegation
+
+Before implementation, Codex should have:
+
+- `AGENTS.md` with stack, commands, conventions, and constraints.
+- `docs/project-brief.md` with product context and V1 scope.
+- A spec when decisions, contracts, or failure behavior matter.
+- A task with one outcome, acceptance criteria, and a verify command.
+
+If Codex has to guess, tighten the input before expanding the code.
+
+## Think First
+
+Use a planning pause before code when the task:
+
+- touches multiple files or systems
+- has tradeoffs
+- could be interpreted more than one way
+- affects architecture, data shape, security, deployment, or agent behavior
+
+Prompt:
+
+```text
+Read AGENTS.md, docs/project-brief.md, the active spec, and this task.
+Tell me what you will change, what you will not touch, and how you will verify it.
+Do not implement yet.
+```
+
+Skip this pause for tiny obvious changes or when the task is already fully
+specified.
+
+## Verification
+
+Every task needs a way for Codex to check its own work.
+
+Use the strongest practical checks:
+
+- tests for behavior and failure paths
+- type checks or builds
+- linting or formatting
+- API checks with curl or HTTP clients
+- browser checks for UI flows
+- starter validation for this repo
+
+For a real project, put the exact commands in `AGENTS.md` so every agent knows
+how to prove work is correct.
+
+## Hooks
+
+Instruction files are guidance. Hooks are guardrails.
+
+Add hooks when a command must run automatically or an action must be blocked.
+Useful defaults:
+
+- Stop hook: run the relevant test or build command before the agent can finish.
+- Pre-action hook: block force pushes, secret edits, or unsafe file writes.
+- Post-action hook: format code after changes.
+
+Keep hooks deterministic and project-specific. They should enforce the workflow,
+not replace review.
+
+## Review Layers
+
+Use three layers for non-trivial agent work:
+
+- Self-review: the implementing agent reviews its own diff before handing off.
+- Automated review: CI or a review tool checks every pull request.
+- Fresh review: you or a separate reviewer agent reads the diff without the
+  implementer's context bias.
+
+Review should check spec compliance, correctness, security, test quality, and
+scope control.
+
+## Recovery
+
+When Codex fails, first assume the input is too weak.
+
+Use this recovery loop:
+
+1. Stop the implementation loop.
+2. Ask whether this is a spec problem, task-size problem, or environment issue.
+3. Tighten the spec or task.
+4. Add a reusable rule to `AGENTS.md` if the correction may recur.
+5. Clear polluted context when needed and rerun with better input.
+
+Do not keep feeding the same vague task back into the agent.
+
+## Tools
+
+Prefer tools in this order:
+
+1. Existing project commands and CLIs.
+2. Small project scripts when a check should be repeatable.
+3. External MCPs or services only when the task genuinely needs them.
+
+The goal is repeatable verification, not tool collection.
+
+## Worktrees
+
+Use Worktree mode for isolated implementation tasks, risky changes, or parallel
+slices.
+
+Use Local mode for supervised docs, templates, and starter-kit updates.
+
+Only run tasks in parallel when they are independent, do not touch the same
+files, and do not depend on an early foundation that is still changing.

@@ -25,8 +25,9 @@ For every new project:
 3. Adapt `AGENTS.md` to the project using the brief as source of truth.
 4. Write a spec when decisions matter.
 5. Break the work into small reviewable tasks.
-6. Build with Codex.
-7. Test, review, and reflect before moving on.
+6. Give each task a verification command.
+7. Build with Codex.
+8. Test, review, commit, and reflect before moving on.
 
 See [docs/new-project.md](docs/new-project.md) for the exact start sequence.
 
@@ -35,7 +36,7 @@ See [docs/new-project.md](docs/new-project.md) for the exact start sequence.
 The core workflow follows the pattern Owain Lewis teaches:
 
 ```text
-brief -> spec -> plan -> build -> test -> review -> ship -> reflect
+brief -> spec -> task -> think first -> build -> verify -> review -> ship -> reflect
 ```
 
 Codex is strongest when the work is shaped well before implementation starts.
@@ -65,8 +66,9 @@ examples/                 Filled-in examples of the starter workflow
 - Starter kit first, learnings second, portfolio third.
 - Prefer principles over tool tricks.
 - Use specs when decisions matter.
+- Slice work into one-outcome tasks.
 - Keep agent instructions compact.
-- Test behavior that matters.
+- Give agents concrete verification commands.
 - Review AI-generated code like code from a junior engineer.
 - Ship small vertical slices.
 - Reflect after each project and improve the workflow.

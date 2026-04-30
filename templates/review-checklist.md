@@ -19,6 +19,7 @@ Use this before accepting AI-generated code.
 
 - Are meaningful tests added or updated?
 - Do the tests cover behavior rather than implementation trivia?
+- Do the tests avoid test theatre and false confidence?
 - Are important failure paths covered?
 - Did the relevant checks pass?
 
@@ -33,6 +34,13 @@ Use this before accepting AI-generated code.
 - Is the solution simpler than the problem?
 - Does it follow existing project patterns?
 - Can a future engineer understand the change?
+
+## Agent Workflow
+
+- Did the implementing agent self-review the diff?
+- Does a fresh reviewer need to check this before shipping?
+- Should a repeated correction become an `AGENTS.md` rule?
+- Should any verification step become a hook?
 
 ## Decision
 

@@ -43,6 +43,9 @@ Use the lightest useful process:
   failure handling has decisions worth reviewing.
 - Plans should split work into small tasks that Codex can execute, a human can
   review, and Git can roll back.
+- Each task should have one outcome, no more than three acceptance criteria, a
+  concrete verify command, and explicit out-of-scope boundaries.
+- Repeated corrections should become reusable project rules in `AGENTS.md`.
 - Learnings should end with a concrete change to templates, docs, workflow, or
   project practice.
 
@@ -54,7 +57,18 @@ Use the lightest useful process:
 4. Create a spec only for decisions that need review.
 5. Create a small task plan.
 6. Build the first vertical slice.
-7. Verify and review before expanding scope.
+7. Verify, self-review, and fresh-review before expanding scope.
+
+## Implementation Loop
+
+Default loop for non-trivial work:
+
+```text
+task -> think first -> implement -> verify -> self-review -> fresh review -> commit
+```
+
+Use `docs/implementation-loop.md` for the full workflow. If the agent starts
+guessing, looping, or expanding scope, stop and improve the spec or task.
 
 ## Style
 
@@ -67,8 +81,12 @@ Use the lightest useful process:
 ## Quality Bar
 
 - Every non-trivial build should have a verification step.
+- Verification commands should be listed in `AGENTS.md` for each real project.
 - Tests should cover behavior, edge cases, and failure paths that matter.
+- Tests should avoid theatre: they should prove behavior, not just assert that a
+  mock was called.
 - Reviews should prioritize correctness, scope control, security, and hidden
   contract changes.
+- Hooks should enforce checks that the agent must not skip.
 - Reflection notes should capture what changed in the workflow, not just what
   was built.

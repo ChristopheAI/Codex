@@ -23,9 +23,10 @@ when the project works.
 6. Use `templates/spec.md` for decisions, invariants, data shapes, or failure
    behavior.
 7. Use `templates/plan.md` when the work needs multiple small tasks.
-8. Build with Codex.
-9. Review with `templates/review-checklist.md`.
-10. Record only the learnings that should change future project defaults.
+8. Use `templates/task.md` when handing one task to Codex.
+9. Build through the loop in `docs/implementation-loop.md`.
+10. Review with `templates/review-checklist.md`.
+11. Record only the learnings that should change future project defaults.
 
 ## Bootstrap Checklist
 
@@ -45,11 +46,13 @@ Minimum:
 ```text
 AGENTS.md
 docs/new-project.md
+docs/implementation-loop.md
 scripts/new-project.sh
 scripts/validate-starter.sh
 templates/project-brief.md
 templates/spec.md
 templates/plan.md
+templates/task.md
 templates/review-checklist.md
 ```
 
@@ -72,9 +75,11 @@ new idea
   -> project brief
   -> first spec if decisions matter
   -> task plan
+  -> one-outcome task
+  -> think first
   -> Codex implementation
-  -> tests/checks
-  -> review
+  -> verification
+  -> self-review and fresh review
   -> commit
   -> reflection
 ```

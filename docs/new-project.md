@@ -68,6 +68,16 @@ Use `templates/plan.md` when the work needs multiple steps.
 Prefer a small vertical slice over a layer-by-layer plan. A good first slice
 can be built, run, reviewed, and improved.
 
+Each task should have:
+
+- one outcome
+- three acceptance criteria or fewer
+- a concrete verification command or manual check
+- clear out-of-scope boundaries
+- a natural commit boundary
+
+Use `templates/task.md` when handing one task to Codex.
+
 ## Step 5: Build With Codex
 
 Only now should Codex start implementing.
@@ -88,6 +98,7 @@ Then review the plan before building.
 Before accepting the work:
 
 - run the relevant checks
+- let the implementing agent self-review the diff
 - review the diff
 - compare against the project brief
 - update docs or templates if the workflow learned something useful
@@ -97,6 +108,10 @@ Run the starter validation:
 ```bash
 sh scripts/validate-starter.sh
 ```
+
+For non-trivial work, use the loop in
+`docs/implementation-loop.md`: task, think first, implement, verify, review,
+commit.
 
 ## Codex App Modes
 
