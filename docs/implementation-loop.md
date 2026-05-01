@@ -134,6 +134,22 @@ Non-trivial work also gets spec review before execution. Check that the spec
 surfaces decisions, invariants, file paths, and out-of-scope boundaries before
 Codex writes code.
 
+## V1 Closeout
+
+Before extending a project beyond V1, run a closeout pass.
+
+Closeout answers:
+
+- Does the current implementation satisfy `docs/project-brief.md`?
+- Does `sh scripts/validate.sh` prove the core behavior and smoke checks?
+- Are remaining gaps blockers, polish, or V2 ideas?
+- Should the project stop, polish, or extend?
+
+If V1 is complete, update `docs/session-handoff.md` and write
+`docs/reflection.md`. The reflection should capture what the starter workflow
+did well, what still required user guidance, and what should be backported to
+the starter kit.
+
 ## Recovery
 
 When Codex fails, first assume the input is too weak.

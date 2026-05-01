@@ -10,6 +10,14 @@ Describe what this project does and who it is for.
 
 Describe the smallest useful version currently being built.
 
+## V1 Status
+
+- Status: `<not started / in progress / complete / paused>`
+- Validation command:
+- Last validation result:
+- Closeout recommendation: `<stop / polish / extend>`
+- Residual gaps:
+
 ## Latest Durable Checkpoint
 
 Update this section at the end of meaningful sessions. Verify exact state with

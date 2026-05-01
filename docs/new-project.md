@@ -161,6 +161,27 @@ For a web app, that command should include a local server smoke check. For an
 AI system, it should include at least one deterministic boundary check for tool
 calls, fallback behavior, eval examples, or traces.
 
+## Step 8: Close Out V1
+
+When the brief and plan appear satisfied, stop and close the loop before adding
+features.
+
+Ask Codex to report:
+
+- whether V1 scope is satisfied
+- what validation proves it
+- what residual gaps remain
+- whether the project should stop, polish, or extend
+
+Then update:
+
+- `docs/session-handoff.md` with V1 status, latest commits, validation result,
+  residual gaps, and closeout recommendation
+- `docs/reflection.md` from `templates/reflection.md`
+
+Do not treat polish as automatic. If V1 is complete and the project was a
+workflow test, stopping is often the right move.
+
 ## Codex App Modes
 
 Use Local mode for:

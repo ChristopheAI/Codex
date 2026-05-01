@@ -32,7 +32,9 @@ when the project works.
 12. Review with `templates/review-checklist.md`.
 13. Update `docs/session-handoff.md` when another Codex thread may need to
     continue the work.
-14. Record only the learnings that should change future project defaults.
+14. Close out V1 with `templates/reflection.md`.
+15. Decide whether to stop, polish, or extend.
+16. Record only the learnings that should change future project defaults.
 
 ## Bootstrap Checklist
 
@@ -45,6 +47,7 @@ when the project works.
 - [ ] First task is small enough to build and review.
 - [ ] `scripts/validate.sh` is adapted to the project.
 - [ ] Verification command or manual check is known.
+- [ ] V1 closeout path is known: handoff update plus reflection.
 
 ## What To Copy Into A New Project
 
@@ -68,6 +71,7 @@ templates/review-checklist.md
 templates/project-gitignore
 templates/project-session-handoff.md
 templates/project-validate.sh
+templates/reflection.md
 ```
 
 Optional:
@@ -98,7 +102,8 @@ new idea
   -> self-review and fresh review
   -> commit
   -> handoff update
-  -> reflection
+  -> V1 closeout
+  -> stop, polish, or extend
 ```
 
 ## Thread Continuation Pattern

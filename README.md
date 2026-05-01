@@ -31,7 +31,7 @@ For every new project:
 7. Commit the planning docs as the project baseline.
 8. Make `sh scripts/validate.sh` prove the current task and V1 behavior.
 9. Build with Codex.
-10. Test, review, commit, and reflect before moving on.
+10. Test, review, commit, and close out V1 before moving on.
 
 See [docs/new-project.md](docs/new-project.md) for the exact start sequence.
 
@@ -89,6 +89,7 @@ examples/                 Filled-in examples of the starter workflow
 - Give agents concrete verification commands.
 - Treat V1 as incomplete until `sh scripts/validate.sh` proves tests and smoke
   checks in one command.
+- After V1, decide deliberately: stop, polish, or extend.
 - Evaluate AI quality with tests, manual examples, and traces.
 - Make handoffs explicit when work must continue across Codex threads.
 - Review AI-generated code like code from a junior engineer.

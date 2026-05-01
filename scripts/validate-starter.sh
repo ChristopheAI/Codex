@@ -20,6 +20,7 @@ templates/review-checklist.md
 templates/project-gitignore
 templates/project-session-handoff.md
 templates/project-validate.sh
+templates/reflection.md
 scripts/new-project.sh
 scripts/validate-starter.sh
 "
@@ -42,7 +43,11 @@ grep -q "AI System Spec" templates/ai-system-spec.md
 grep -q "Acceptance Criteria" templates/task.md
 grep -q "Project Validation" templates/project-validate.sh
 grep -q "Project Session Handoff" templates/project-session-handoff.md
+grep -q "Project Reflection" templates/reflection.md
 grep -q ".env" templates/project-gitignore
+grep -q "V1 Closeout" docs/implementation-loop.md
+grep -q "Close Out V1" docs/new-project.md
+grep -q "stop, polish, or extend" docs/starter-kit.md
 grep -q "templates/project-validate.sh" scripts/new-project.sh
 grep -q "templates/project-session-handoff.md" scripts/new-project.sh
 grep -q "templates/project-gitignore" scripts/new-project.sh
