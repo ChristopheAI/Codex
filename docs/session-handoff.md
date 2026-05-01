@@ -28,13 +28,29 @@ For AI systems, also use:
 
 Update this section at the end of meaningful sessions.
 
-- Latest pushed branch:
-- Latest pushed commit:
-- Latest local commit:
-- Active project or experiment:
+- Latest pushed branch: `origin/main`
+- Latest pushed commit: `06318f5 Add AI system project defaults`
+- Latest local commit: `2c75b4f Add thread handoff protocol`
+- Active project or experiment: fresh Codex thread continuation test.
 - What was validated:
+  - A new Codex thread read `AGENTS.md`, this handoff file,
+    `docs/validation-protocol.md`, `docs/starter-kit.md`, and the git log.
+  - It correctly identified this repo as Christophe's reusable Codex starter
+    kit, not a notes repo.
+  - It correctly identified `main` as ahead of `origin/main` by one local
+    commit.
+  - It correctly treated UUIDs and markers as values that must be resolved
+    before validation, not automatically as git commits.
+  - It proposed the expected repository-health checks.
 - Known gaps:
+  - Commit `2c75b4f` is local only until intentionally pushed.
+  - No active user-defined markers are currently documented.
 - Next recommended action:
+  - Run repository-health validation.
+  - Decide whether to push `2c75b4f` after confirming the handoff behavior is
+    useful.
+  - Start the first small real project from the starter kit to validate the
+    full brief/spec/task/build/verify/review loop.
 
 ## Active Context Markers
 
