@@ -16,7 +16,8 @@ project defaults, templates, validation scripts, and project practice.
 ## Current Operating Model
 
 ```text
-brief -> spec -> task -> baseline commit -> think first -> build -> verify -> review -> ship -> reflect
+brief -> spec -> task -> baseline commit -> think first -> build -> verify
+-> review -> closeout -> stop/polish/extend
 ```
 
 For AI systems, also use:
@@ -30,10 +31,12 @@ Update this section at the end of meaningful sessions. Always verify exact
 commit state with `git status --short --branch` and `git log --oneline`.
 
 - Latest pushed branch: `origin/main`
-- Latest pushed commit before this handoff update:
-  - `3e548ec docs: extract Owain Skool workflow gaps`
-- Active project or experiment: fresh GitHub clone validation plus Timezone
-  Agent starter-kit learnings.
+- Latest pushed commit:
+  - `e2a003f feat: add project validation defaults`
+- Latest local checkpoint before this handoff update:
+  - `965e270 docs: add v1 closeout defaults`
+- Active project or experiment: meeting-cost-calculator fresh-start workflow
+  test plus V1 closeout backport.
 - What was validated:
   - A new Codex thread read `AGENTS.md`, this handoff file,
     `docs/validation-protocol.md`, `docs/starter-kit.md`, and the git log.
@@ -53,17 +56,26 @@ commit state with `git status --short --branch` and `git log --oneline`.
     `/tmp/codex-starter-fresh.0HLi0S/Codex` saw latest commit `3e548ec`, passed
     `sh scripts/validate-starter.sh`, and created `docs/project-brief.md` with
     `sh scripts/new-project.sh`.
+  - `meeting-cost-calculator` proved the current starter flow: starter init,
+    project brief, project-specific `AGENTS.md`, planning baseline, isolated
+    Task 1, real `scripts/validate.sh`, review, handoff fix, V1 closeout, and
+    reflection.
+  - The V1 closeout learning was backported in `965e270` with
+    `templates/reflection.md`, V1 closeout docs, project handoff closeout
+    fields, and starter validation checks.
+  - Fresh checks for the backport:
+    - `sh scripts/validate-starter.sh`
+    - `git diff --check`
+    - `sh -n scripts/validate-starter.sh && sh -n scripts/new-project.sh &&
+      sh -n templates/project-validate.sh`
+    - fresh-start copy check in `/tmp/codex-closeout-defaults.*`
 - Known gaps:
-  - Handoff docs can become stale after pushes unless updated as part of the
-    session closeout.
-  - The fresh-start flow creates a project brief, but does not yet scaffold
-    project-local validation defaults like `scripts/validate.sh`,
-    `.gitignore`, or a project-specific handoff file.
+  - `965e270` and this handoff update are local until intentionally pushed.
+  - Existing project smoke checks are still project-specific; the starter kit
+    provides the pattern, not a universal browser runner.
   - No active user-defined markers are currently documented.
 - Next recommended action:
-  - Backport the Timezone Agent closeout pattern into starter-kit defaults:
-    project-local `.gitignore`, `scripts/validate.sh`, `docs/session-handoff.md`,
-    and web/API smoke-test guidance.
+  - Review and push the starter-kit closeout commits when ready.
   - Keep validating from a fresh clone after each starter-kit workflow change.
 
 ## Active Context Markers
