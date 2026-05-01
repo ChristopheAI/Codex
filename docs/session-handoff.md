@@ -30,12 +30,10 @@ Update this section at the end of meaningful sessions. Always verify exact
 commit state with `git status --short --branch` and `git log --oneline`.
 
 - Latest pushed branch: `origin/main`
-- Latest pushed commit: `06318f5 Add AI system project defaults`
-- Latest local checkpoint before this handoff update:
-  - `9a64ca8 Update session handoff checkpoint`
-  - `2c75b4f Add thread handoff protocol`
-- Active project or experiment: fresh Codex thread plus Timezone Agent starter
-  kit validation.
+- Latest pushed commit before this handoff update:
+  - `3e548ec docs: extract Owain Skool workflow gaps`
+- Active project or experiment: fresh GitHub clone validation plus Timezone
+  Agent starter-kit learnings.
 - What was validated:
   - A new Codex thread read `AGENTS.md`, this handoff file,
     `docs/validation-protocol.md`, `docs/starter-kit.md`, and the git log.
@@ -51,15 +49,22 @@ commit state with `git status --short --branch` and `git log --oneline`.
     starting Task 2.
   - The experiment revealed that planning artifacts must be committed as a
     baseline before the first implementation task.
+  - A fresh clone from `https://github.com/ChristopheAI/Codex.git` at
+    `/tmp/codex-starter-fresh.0HLi0S/Codex` saw latest commit `3e548ec`, passed
+    `sh scripts/validate-starter.sh`, and created `docs/project-brief.md` with
+    `sh scripts/new-project.sh`.
 - Known gaps:
-  - Local handoff/workflow commits are not pushed until intentionally published.
+  - Handoff docs can become stale after pushes unless updated as part of the
+    session closeout.
+  - The fresh-start flow creates a project brief, but does not yet scaffold
+    project-local validation defaults like `scripts/validate.sh`,
+    `.gitignore`, or a project-specific handoff file.
   - No active user-defined markers are currently documented.
 - Next recommended action:
-  - Run repository-health validation.
-  - In `timezone-agent`, commit the planning docs as the baseline before
-    continuing to Task 2.
-  - Continue validating the full brief/spec/task/build/verify/review loop on
-    the Timezone Agent project.
+  - Backport the Timezone Agent closeout pattern into starter-kit defaults:
+    project-local `.gitignore`, `scripts/validate.sh`, `docs/session-handoff.md`,
+    and web/API smoke-test guidance.
+  - Keep validating from a fresh clone after each starter-kit workflow change.
 
 ## Active Context Markers
 
