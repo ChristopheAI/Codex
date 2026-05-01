@@ -29,7 +29,9 @@ grep -q "Codex Project Starter Kit" README.md
 grep -q "Do not start with code" docs/new-project.md
 grep -q "Project Brief" templates/project-brief.md
 grep -q "project brief" AGENTS.md
+grep -q "planning baseline" AGENTS.md
 grep -q "think first" docs/implementation-loop.md
+grep -q "Planning Baseline" docs/implementation-loop.md
 grep -q "Pattern Choice" docs/ai-system-defaults.md
 grep -q "Session Handoff" docs/session-handoff.md
 grep -q "Marker Resolution" docs/validation-protocol.md

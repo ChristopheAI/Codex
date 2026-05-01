@@ -26,11 +26,12 @@ when the project works.
    decisions.
 8. Use `templates/plan.md` when the work needs multiple small tasks.
 9. Use `templates/task.md` when handing one task to Codex.
-10. Build through the loop in `docs/implementation-loop.md`.
-11. Review with `templates/review-checklist.md`.
-12. Update `docs/session-handoff.md` when another Codex thread may need to
+10. Commit the planning artifacts as the project baseline.
+11. Build through the loop in `docs/implementation-loop.md`.
+12. Review with `templates/review-checklist.md`.
+13. Update `docs/session-handoff.md` when another Codex thread may need to
     continue the work.
-13. Record only the learnings that should change future project defaults.
+14. Record only the learnings that should change future project defaults.
 
 ## Bootstrap Checklist
 
@@ -84,6 +85,7 @@ new idea
   -> first spec if decisions matter
   -> AI system spec if LLMs or agents are involved
   -> task plan
+  -> planning baseline commit
   -> one-outcome task
   -> think first
   -> Codex implementation

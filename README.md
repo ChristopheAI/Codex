@@ -27,9 +27,10 @@ For every new project:
 4. Write a spec when decisions matter.
 5. Use the AI system spec when the project includes LLMs, RAG, tools, or agents.
 6. Break the work into small reviewable tasks.
-7. Give each task a verification command.
-8. Build with Codex.
-9. Test, review, commit, and reflect before moving on.
+7. Commit the planning docs as the project baseline.
+8. Give each task a verification command.
+9. Build with Codex.
+10. Test, review, commit, and reflect before moving on.
 
 See [docs/new-project.md](docs/new-project.md) for the exact start sequence.
 
@@ -50,7 +51,7 @@ Resolve the marker first, then validate the intended scope.
 The core workflow follows the pattern Owain Lewis teaches:
 
 ```text
-brief -> spec -> task -> think first -> build -> verify -> review -> ship -> reflect
+brief -> spec -> task -> baseline commit -> think first -> build -> verify -> review -> ship -> reflect
 ```
 
 Codex is strongest when the work is shaped well before implementation starts.
@@ -82,6 +83,7 @@ examples/                 Filled-in examples of the starter workflow
 - Use specs when decisions matter.
 - Use the simplest AI pattern that solves the problem.
 - Slice work into one-outcome tasks.
+- Commit planning artifacts before the first implementation task.
 - Keep agent instructions compact.
 - Give agents concrete verification commands.
 - Evaluate AI quality with tests, manual examples, and traces.

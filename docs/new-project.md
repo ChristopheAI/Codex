@@ -82,7 +82,29 @@ Each task should have:
 
 Use `templates/task.md` when handing one task to Codex.
 
-## Step 5: Build With Codex
+## Step 5: Commit The Planning Baseline
+
+Before implementation, commit the planning artifacts that define the work.
+
+At minimum, commit:
+
+- `docs/project-brief.md`
+- the active spec, if one exists
+- `docs/ai-system-spec.md`, if the project uses AI
+- the active task plan
+- project-specific `AGENTS.md` updates
+
+Suggested commit message:
+
+```text
+docs: add project planning baseline
+```
+
+This keeps the source of truth in Git before the first code commit. A Task 1
+implementation commit should never be the first durable record of what the
+project is supposed to do.
+
+## Step 6: Build With Codex
 
 Only now should Codex start implementing.
 
@@ -97,7 +119,7 @@ Do not implement yet.
 
 Then review the plan before building.
 
-## Step 6: Verify And Review
+## Step 7: Verify And Review
 
 Before accepting the work:
 

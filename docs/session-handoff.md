@@ -16,7 +16,7 @@ project defaults, templates, validation scripts, and project practice.
 ## Current Operating Model
 
 ```text
-brief -> spec -> task -> think first -> build -> verify -> review -> ship -> reflect
+brief -> spec -> task -> baseline commit -> think first -> build -> verify -> review -> ship -> reflect
 ```
 
 For AI systems, also use:
@@ -26,12 +26,16 @@ For AI systems, also use:
 
 ## Latest Durable Checkpoint
 
-Update this section at the end of meaningful sessions.
+Update this section at the end of meaningful sessions. Always verify exact
+commit state with `git status --short --branch` and `git log --oneline`.
 
 - Latest pushed branch: `origin/main`
 - Latest pushed commit: `06318f5 Add AI system project defaults`
-- Latest local commit: `2c75b4f Add thread handoff protocol`
-- Active project or experiment: fresh Codex thread continuation test.
+- Latest local checkpoint before this handoff update:
+  - `9a64ca8 Update session handoff checkpoint`
+  - `2c75b4f Add thread handoff protocol`
+- Active project or experiment: fresh Codex thread plus Timezone Agent starter
+  kit validation.
 - What was validated:
   - A new Codex thread read `AGENTS.md`, this handoff file,
     `docs/validation-protocol.md`, `docs/starter-kit.md`, and the git log.
@@ -42,15 +46,20 @@ Update this section at the end of meaningful sessions.
   - It correctly treated UUIDs and markers as values that must be resolved
     before validation, not automatically as git commits.
   - It proposed the expected repository-health checks.
+  - A separate empty `timezone-agent` folder used the starter kit to create a
+    project brief, AI system spec, task plan, and Task 1 implementation without
+    starting Task 2.
+  - The experiment revealed that planning artifacts must be committed as a
+    baseline before the first implementation task.
 - Known gaps:
-  - Commit `2c75b4f` is local only until intentionally pushed.
+  - Local handoff/workflow commits are not pushed until intentionally published.
   - No active user-defined markers are currently documented.
 - Next recommended action:
   - Run repository-health validation.
-  - Decide whether to push `2c75b4f` after confirming the handoff behavior is
-    useful.
-  - Start the first small real project from the starter kit to validate the
-    full brief/spec/task/build/verify/review loop.
+  - In `timezone-agent`, commit the planning docs as the baseline before
+    continuing to Task 2.
+  - Continue validating the full brief/spec/task/build/verify/review loop on
+    the Timezone Agent project.
 
 ## Active Context Markers
 

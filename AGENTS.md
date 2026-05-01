@@ -16,7 +16,7 @@ project execution.
 Default lifecycle:
 
 ```text
-brief -> spec -> plan -> build -> test -> review -> ship -> reflect
+brief -> spec -> plan -> baseline commit -> build -> test -> review -> ship -> reflect
 ```
 
 Use the lightest useful process:
@@ -43,6 +43,8 @@ Use the lightest useful process:
   failure handling has decisions worth reviewing.
 - Plans should split work into small tasks that Codex can execute, a human can
   review, and Git can roll back.
+- Project planning artifacts should be committed as the planning baseline before
+  the first implementation task.
 - Each task should have one outcome, no more than three acceptance criteria, a
   concrete verify command, and explicit out-of-scope boundaries.
 - Repeated corrections should become reusable project rules in `AGENTS.md`.
@@ -63,8 +65,10 @@ Use the lightest useful process:
 3. Update `AGENTS.md` so Codex understands the project.
 4. Create a spec only for decisions that need review.
 5. Create a small task plan.
-6. Build the first vertical slice.
-7. Verify, self-review, and fresh-review before expanding scope.
+6. Commit `docs/project-brief.md`, specs, and the task plan as the planning
+   baseline.
+7. Build the first vertical slice.
+8. Verify, self-review, and fresh-review before expanding scope.
 
 ## New Thread Sequence
 

@@ -18,8 +18,25 @@ Before implementation, Codex should have:
 - `docs/project-brief.md` with product context and V1 scope.
 - A spec when decisions, contracts, or failure behavior matter.
 - A task with one outcome, acceptance criteria, and a verify command.
+- A planning baseline commit containing the brief, specs, plan, and relevant
+  project instructions.
 
 If Codex has to guess, tighten the input before expanding the code.
+
+## Planning Baseline
+
+Commit planning artifacts before the first implementation task.
+
+This baseline should include:
+
+- `docs/project-brief.md`
+- the active spec or AI system spec
+- the active task plan
+- project-specific `AGENTS.md` updates
+
+Then each implementation task can be reviewed against the committed source of
+truth. Do not let the first code commit become the first durable record of the
+project intent.
 
 ## Think First
 
