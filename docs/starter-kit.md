@@ -16,7 +16,8 @@ when the project works.
 ## When Starting A New Project
 
 1. Create a new repo or folder from this starter kit.
-2. Copy `templates/project-brief.md` to `docs/project-brief.md`.
+2. Run `sh scripts/new-project.sh` to create the project brief, handoff file,
+   validation script, and `.gitignore`.
 3. Fill in the project brief.
 4. Adapt `AGENTS.md` from that brief.
 5. Decide whether the first task needs a spec.
@@ -42,6 +43,7 @@ when the project works.
 - [ ] Tech stack is chosen intentionally.
 - [ ] `AGENTS.md` reflects the project, not this starter repo.
 - [ ] First task is small enough to build and review.
+- [ ] `scripts/validate.sh` is adapted to the project.
 - [ ] Verification command or manual check is known.
 
 ## What To Copy Into A New Project
@@ -63,6 +65,9 @@ templates/ai-system-spec.md
 templates/plan.md
 templates/task.md
 templates/review-checklist.md
+templates/project-gitignore
+templates/project-session-handoff.md
+templates/project-validate.sh
 ```
 
 Optional:
@@ -89,7 +94,7 @@ new idea
   -> one-outcome task
   -> think first
   -> Codex implementation
-  -> verification
+  -> sh scripts/validate.sh
   -> self-review and fresh review
   -> commit
   -> handoff update

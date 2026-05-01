@@ -22,13 +22,14 @@ build the app.
 For every new project:
 
 1. Start from this repository structure.
-2. Fill in `templates/project-brief.md` and save it as `docs/project-brief.md`.
+2. Run `sh scripts/new-project.sh` to create the project brief, handoff file,
+   validation script, and `.gitignore`.
 3. Adapt `AGENTS.md` to the project using the brief as source of truth.
 4. Write a spec when decisions matter.
 5. Use the AI system spec when the project includes LLMs, RAG, tools, or agents.
 6. Break the work into small reviewable tasks.
 7. Commit the planning docs as the project baseline.
-8. Give each task a verification command.
+8. Make `sh scripts/validate.sh` prove the current task and V1 behavior.
 9. Build with Codex.
 10. Test, review, commit, and reflect before moving on.
 
@@ -86,6 +87,8 @@ examples/                 Filled-in examples of the starter workflow
 - Commit planning artifacts before the first implementation task.
 - Keep agent instructions compact.
 - Give agents concrete verification commands.
+- Treat V1 as incomplete until `sh scripts/validate.sh` proves tests and smoke
+  checks in one command.
 - Evaluate AI quality with tests, manual examples, and traces.
 - Make handoffs explicit when work must continue across Codex threads.
 - Review AI-generated code like code from a junior engineer.

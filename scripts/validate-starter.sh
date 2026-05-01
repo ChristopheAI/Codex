@@ -17,6 +17,9 @@ templates/ai-system-spec.md
 templates/plan.md
 templates/task.md
 templates/review-checklist.md
+templates/project-gitignore
+templates/project-session-handoff.md
+templates/project-validate.sh
 scripts/new-project.sh
 scripts/validate-starter.sh
 "
@@ -37,5 +40,11 @@ grep -q "Session Handoff" docs/session-handoff.md
 grep -q "Marker Resolution" docs/validation-protocol.md
 grep -q "AI System Spec" templates/ai-system-spec.md
 grep -q "Acceptance Criteria" templates/task.md
+grep -q "Project Validation" templates/project-validate.sh
+grep -q "Project Session Handoff" templates/project-session-handoff.md
+grep -q ".env" templates/project-gitignore
+grep -q "templates/project-validate.sh" scripts/new-project.sh
+grep -q "templates/project-session-handoff.md" scripts/new-project.sh
+grep -q "templates/project-gitignore" scripts/new-project.sh
 
 echo "Starter kit validation passed"

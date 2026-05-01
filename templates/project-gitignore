@@ -1,0 +1,27 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Local environments and dependencies
+.venv/
+venv/
+node_modules/
+
+# Generated caches
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+
+# Build, coverage, and test output
+build/
+dist/
+coverage/
+.coverage
+
+# Local editor and OS files
+.DS_Store
+.idea/
+.vscode/

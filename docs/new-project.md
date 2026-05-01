@@ -24,6 +24,13 @@ Or use the starter script:
 sh scripts/new-project.sh
 ```
 
+The starter script creates:
+
+- `docs/project-brief.md`
+- `docs/session-handoff.md`
+- `scripts/validate.sh`
+- `.gitignore`
+
 Then fill it in.
 
 The brief should answer:
@@ -42,7 +49,7 @@ Update `AGENTS.md` so Codex knows the project-specific context:
 - what the product does
 - what stack is being used
 - where the project brief lives
-- what commands verify the work
+- `sh scripts/validate.sh` as the project validation command
 - what is out of scope
 
 Keep it short. Reference source files instead of duplicating them.
@@ -81,6 +88,11 @@ Each task should have:
 - a natural commit boundary
 
 Use `templates/task.md` when handing one task to Codex.
+
+Before the first implementation task, edit `scripts/validate.sh` so it contains
+the strongest practical checks for this project. Keep it simple at first, then
+expand it as the project gains tests, API checks, UI smoke checks, evals, or
+deployment checks.
 
 ## Step 5: Commit The Planning Baseline
 
@@ -123,13 +135,13 @@ Then review the plan before building.
 
 Before accepting the work:
 
-- run the relevant checks
+- run `sh scripts/validate.sh`
 - let the implementing agent self-review the diff
 - review the diff
 - compare against the project brief
 - update docs or templates if the workflow learned something useful
 
-Run the starter validation:
+For this starter-kit repo, run:
 
 ```bash
 sh scripts/validate-starter.sh
@@ -138,6 +150,16 @@ sh scripts/validate-starter.sh
 For non-trivial work, use the loop in
 `docs/implementation-loop.md`: task, think first, implement, verify, review,
 commit.
+
+V1 is not done until one project-local command proves the relevant behavior:
+
+```bash
+sh scripts/validate.sh
+```
+
+For a web app, that command should include a local server smoke check. For an
+AI system, it should include at least one deterministic boundary check for tool
+calls, fallback behavior, eval examples, or traces.
 
 ## Codex App Modes
 

@@ -87,6 +87,16 @@ Use the strongest practical checks:
 For a real project, put the exact commands in `AGENTS.md` so every agent knows
 how to prove work is correct.
 
+Default to one project-local validation command:
+
+```bash
+sh scripts/validate.sh
+```
+
+That script should evolve with the project. Early on it may only run a focused
+test command. By V1 closeout it should prove the core behavior, smoke checks,
+and important failure paths in one repeatable command.
+
 For web apps, include a smoke check that starts the server, loads the main page,
 and exercises the smallest useful API or UI path. For AI paths, include at
 least one check that proves the model boundary, tool call, or safe fallback is
