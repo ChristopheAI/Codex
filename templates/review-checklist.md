@@ -22,18 +22,32 @@ Use this before accepting AI-generated code.
 - Do the tests avoid test theatre and false confidence?
 - Are important failure paths covered?
 - Did the relevant checks pass?
+- For AI behavior, are structural tests separated from quality evals?
 
 ## Security And Data
 
 - Are secrets avoided?
 - Is user data handled carefully?
 - Are permissions, auth, and validation appropriate?
+- Do external writes have dry-run or human approval where needed?
 
 ## Maintainability
 
 - Is the solution simpler than the problem?
 - Does it follow existing project patterns?
 - Can a future engineer understand the change?
+- Did the change add durable rules only where they will prevent repeated
+  mistakes?
+
+## AI System Quality
+
+- Are prompts/templates versioned or easy to find?
+- Is model output structured where code consumes it?
+- Are tool inputs validated and errors returned as data?
+- Is retrieval as simple as the problem allows?
+- Are citations, no-answer behavior, and eval examples defined where relevant?
+- Are logs/traces sufficient to debug model, tool, retrieval, latency, cost, and
+  error behavior?
 
 ## Agent Workflow
 

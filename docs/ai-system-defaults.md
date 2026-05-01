@@ -45,6 +45,22 @@ Defaults:
 
 Do not parse free-form prose when a schema would make the contract explicit.
 
+## Prompt And Context Design
+
+Treat prompts as versioned application logic.
+
+Defaults:
+
+- Keep prompts in named templates or functions, not scattered strings.
+- Separate static system instructions from dynamic request context.
+- Delimit user content, retrieved content, and instructions clearly.
+- Use few-shot examples when consistency matters.
+- Keep conversation history bounded and intentional.
+- Test prompts against examples before changing models or deployment behavior.
+
+If prompt behavior degrades, simplify first. Remove complexity until the core
+behavior works, then add constraints back deliberately.
+
 ## Tool Design
 
 Tools are APIs for the model. Design them like APIs.
@@ -75,25 +91,36 @@ Always gate:
 Start strict. Relax only with explicit allowlists, audit logs, and evidence that
 the pattern is safe.
 
+For external writes, add dry-run behavior before real execution whenever
+possible. Preview email labels, message drafts, database writes, file uploads,
+and deployments before applying them.
+
 ## RAG Strategy
 
 Start simple and add retrieval complexity only when there is evidence.
 
-1. Direct context: if the content fits in the prompt, load it directly.
+1. Direct file/context loading: if the content fits in the prompt, load it
+   directly.
 2. Document-oriented retrieval: if documents are coherent units, index document
    names and summaries, then read the full document.
 3. Vector search: use embeddings when semantic similarity is needed across many
    chunks or documents.
 4. Hybrid search: combine vector search with keyword search when exact terms,
    IDs, policy numbers, dates, or acronyms matter.
-5. Agentic RAG: give the agent retrieval tools only when it must choose the
-   retrieval strategy dynamically.
+5. Reranking: retrieve more candidates than needed, then rerank when relevance
+   quality matters more than latency and cost.
+6. Agentic RAG: give the agent retrieval tools only when it must choose the
+   retrieval strategy dynamically or read full documents selectively.
+
+Chunking is a tradeoff, not a requirement. If documents are meant to be read
+whole, use document-oriented retrieval before splitting them into fragments.
 
 Production RAG should define:
 
 - document source and refresh process
 - chunking or document-read strategy
 - retrieval method
+- candidate count and reranking strategy, if used
 - citations or source reporting
 - no-answer behavior
 - evaluation set for answer quality and retrieval relevance
@@ -124,8 +151,10 @@ A production-minded AI app should define:
 - health checks
 - cost and latency tracking
 - caching for expensive repeated operations
+- connection pooling when databases are used
 - graceful error behavior
 - streaming strategy when response latency matters
+- CORS and deployment config when frontend and backend are separate
 - deployment target and smoke test
 
 For chat systems, source citations and "I do not know" behavior matter more
@@ -145,6 +174,12 @@ Trace each request through model calls, tool calls, retrieval, latency, token
 usage, cost, and errors. Without traces, debugging AI behavior becomes guesswork.
 
 Manual eval failures should become automated checks when possible.
+
+Manual evals should include input, output, rating, and notes. The notes matter
+because they explain what quality means.
+
+Before trusting LLM-as-judge, compare it against human-rated examples and tune
+the judge prompt until alignment is acceptable for the risk of the system.
 
 ## First AI Slice
 

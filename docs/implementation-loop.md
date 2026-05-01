@@ -23,6 +23,15 @@ Before implementation, Codex should have:
 
 If Codex has to guess, tighten the input before expanding the code.
 
+Keep the artifacts honest:
+
+- Requirements describe outcomes and user/business value.
+- Specs describe the approach in this codebase.
+- Tasks describe one reviewable outcome.
+
+For small work, these can share one file or chat prompt. For work that matters,
+keep the mental separation so the agent does not turn assumptions into code.
+
 ## Planning Baseline
 
 Commit planning artifacts before the first implementation task.
@@ -58,6 +67,10 @@ Do not implement yet.
 Skip this pause for tiny obvious changes or when the task is already fully
 specified.
 
+For larger tasks, split the generation inside the task as well. Ask Codex to
+finish one runnable step, verify it, and then continue. A task can be scoped
+correctly and still be too much for one generation.
+
 ## Verification
 
 Every task needs a way for Codex to check its own work.
@@ -74,6 +87,11 @@ Use the strongest practical checks:
 For a real project, put the exact commands in `AGENTS.md` so every agent knows
 how to prove work is correct.
 
+For web apps, include a smoke check that starts the server, loads the main page,
+and exercises the smallest useful API or UI path. For AI paths, include at
+least one check that proves the model boundary, tool call, or safe fallback is
+observable.
+
 ## Hooks
 
 Instruction files are guidance. Hooks are guardrails.
@@ -84,6 +102,8 @@ Useful defaults:
 - Stop hook: run the relevant test or build command before the agent can finish.
 - Pre-action hook: block force pushes, secret edits, or unsafe file writes.
 - Post-action hook: format code after changes.
+- External-action gate: force dry-run or human approval before sending,
+  labeling, uploading, writing to production data, or deploying.
 
 Keep hooks deterministic and project-specific. They should enforce the workflow,
 not replace review.
@@ -100,6 +120,10 @@ Use three layers for non-trivial agent work:
 Review should check spec compliance, correctness, security, test quality, and
 scope control.
 
+Non-trivial work also gets spec review before execution. Check that the spec
+surfaces decisions, invariants, file paths, and out-of-scope boundaries before
+Codex writes code.
+
 ## Recovery
 
 When Codex fails, first assume the input is too weak.
@@ -113,6 +137,24 @@ Use this recovery loop:
 5. Clear polluted context when needed and rerun with better input.
 
 Do not keep feeding the same vague task back into the agent.
+
+If the same class of mistake repeats, fix the template or `AGENTS.md`. If review
+keeps missing issues, tighten the review checklist. If tasks keep sprawling,
+tighten the planning template.
+
+## Context Compression
+
+Agent context should be compact and high-signal.
+
+When instructions grow:
+
+- merge duplicate rules
+- remove preamble that does not change behavior
+- keep exact commands, paths, and hard-earned edge cases
+- prefer bullets for rule lists
+- keep examples only when they clarify an edge case
+
+Every word competes for the model's attention.
 
 ## Tools
 

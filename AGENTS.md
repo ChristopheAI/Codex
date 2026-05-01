@@ -57,6 +57,10 @@ Use the lightest useful process:
   resolve the marker before running generic checks.
 - Learnings should end with a concrete change to templates, docs, workflow, or
   project practice.
+- Keep agent-facing context compressed. Remove repeated rules and padding, but
+  keep exact commands, paths, constraints, and hard-earned edge cases.
+- External writes should have a dry-run or human approval path before real
+  execution.
 
 ## New Project Sequence
 
@@ -106,6 +110,8 @@ guessing, looping, or expanding scope, stop and improve the spec or task.
   mock was called.
 - Reviews should prioritize correctness, scope control, security, and hidden
   contract changes.
+- Non-trivial work should get spec review before execution and output review
+  after execution.
 - Hooks should enforce checks that the agent must not skip.
 - AI systems should define observability, evals, and no-answer behavior before
   production use.

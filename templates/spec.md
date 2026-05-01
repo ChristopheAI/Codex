@@ -8,20 +8,35 @@ What are we building?
 
 Why does this matter?
 
+## Users
+
+Who uses this, and who is affected by it?
+
 ## Context
 
 Relevant product, codebase, user, or workflow context.
 
 ## Requirements
 
-- Requirement 1
-- Requirement 2
-- Requirement 3
+Requirements describe observable outcomes, not implementation steps.
+
+- FR-01:
+- FR-02:
+- FR-03:
+
+## Non-Functional Requirements
+
+Only include what matters for this change.
+
+- NFR-01:
 
 ## Decisions
 
+Design decisions should reference the requirement or invariant that drove them.
+
 - Decision:
   Reason:
+  Alternatives considered:
 
 ## AI Behavior
 
@@ -38,12 +53,21 @@ How should failures behave?
 
 ## Testing Strategy
 
-What tests or checks prove this works?
+What tests or checks prove this works? Name the level where possible:
+
+- Unit:
+- Integration:
+- E2E or smoke:
+- Manual review/eval:
 
 ## Out Of Scope
 
 What are we explicitly not building now?
 
+## Assumptions
+
+- [ASSUMED]
+
 ## Open Questions
 
-- Question:
+- [TBD]

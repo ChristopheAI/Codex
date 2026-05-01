@@ -32,6 +32,20 @@ project brief
   -> monitoring and reflection
 ```
 
+## Artifact Boundaries
+
+Keep the jobs separate, even when the workflow stays lightweight:
+
+- Requirement or ticket: what should be true and why it matters.
+- Spec: how this change should fit the current codebase.
+- Plan: ordered slices that can be implemented, reviewed, and rolled back.
+- Task: one outcome with acceptance criteria and a concrete verify command.
+
+Do not pre-decide technical design in the ticket when the codebase should shape
+that decision. Do not let the spec become a permanent parallel source of truth.
+Once the code is right, carry durable reasoning in commit messages, PR
+descriptions, ADRs, or handoff notes.
+
 ## What To Copy
 
 ### 1. Blueprint-Style Skills
@@ -80,6 +94,14 @@ when the relevant checks pass and the diff has been reviewed.
 For serious work, review should happen with fresh context where possible. A
 model that just wrote the code can be biased toward accepting its own choices.
 
+Review has two moments:
+
+- spec review before execution
+- output review after execution
+
+The output review checks whether the diff matches the task, preserves
+invariants, avoids hidden technical decisions, and passes meaningful tests.
+
 ### 6. Agent Automation
 
 The long-term direction is an agent worker loop:
@@ -89,6 +111,27 @@ ticket -> claim -> worktree -> agent -> hooks -> tests -> review -> PR
 ```
 
 This is advanced. The foundation is still good task shape and verification.
+
+### 7. Production AI Defaults
+
+AI projects need more than working prompts. They need prompt templates,
+structured outputs, context management, tool validation, evals, observability,
+and safe external-action paths.
+
+For retrieval systems, start simple:
+
+```text
+file loading -> document-oriented retrieval -> vector search -> hybrid search
+-> reranking -> agentic RAG
+```
+
+Add complexity only when the simpler level is insufficient.
+
+### 8. Compact Context
+
+Long instructions degrade agent focus. Keep `AGENTS.md`, specs, and task files
+short enough that every sentence earns its place. Repeated mistakes become
+rules; repeated rules should be compressed.
 
 ## Sources To Study
 

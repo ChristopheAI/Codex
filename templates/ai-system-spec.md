@@ -44,8 +44,13 @@ Schema or response shape:
 
 - Model:
 - Temperature or determinism setting:
+- Prompt template location:
 - System instructions:
 - Prompt variables:
+- Static context:
+- Dynamic context:
+- Conversation history strategy:
+- Delimiters or few-shot examples:
 - Refusal or boundary behavior:
 
 ## Workflow Or Agent Loop
@@ -86,6 +91,10 @@ Use only if the system needs external knowledge.
 - Knowledge source:
 - Context fits in prompt?:
 - Retrieval strategy:
+- Document-oriented retrieval possible?:
+- Chunking strategy:
+- Hybrid search needed?:
+- Reranking needed?:
 - Query routing:
 - Citation/source behavior:
 - No-answer behavior:
@@ -98,16 +107,20 @@ Use only if the system needs external knowledge.
 - Prompt-injection risks:
 - External writes or transmissions:
 - Human approval points:
+- Dry-run behavior:
 - Audit/logging needs:
 
 ## Evals And Observability
 
 - Unit tests:
 - Manual eval examples:
+- Manual eval criteria:
 - LLM-as-judge criteria:
 - Human/judge alignment target:
 - Trace fields:
 - Cost/latency metrics:
+- Health checks:
+- Smoke checks:
 
 ## Verification
 
