@@ -50,6 +50,9 @@ Use the lightest useful process:
   `templates/ai-system-spec.md` before implementation.
 - Prefer the simplest AI pattern that works: SDK call, then workflow, then
   agent only when the path is genuinely unknown.
+- Cross-thread context belongs in `docs/session-handoff.md`, not only in chat.
+- When asked to validate from a marker, use `docs/validation-protocol.md` and
+  resolve the marker before running generic checks.
 - Learnings should end with a concrete change to templates, docs, workflow, or
   project practice.
 
@@ -62,6 +65,14 @@ Use the lightest useful process:
 5. Create a small task plan.
 6. Build the first vertical slice.
 7. Verify, self-review, and fresh-review before expanding scope.
+
+## New Thread Sequence
+
+1. Read `AGENTS.md`.
+2. Read `docs/session-handoff.md`.
+3. Read `docs/validation-protocol.md`.
+4. Check `git status --short --branch` and the latest git log.
+5. Summarize the continuation point before changing files.
 
 ## Implementation Loop
 

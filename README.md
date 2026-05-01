@@ -12,6 +12,7 @@ starter kit, the workflow, or the quality of future projects.
 - Reuse the same spec, plan, review, and project brief workflow every time.
 - Turn AI engineering lessons into reusable project defaults.
 - Build production-minded AI systems, not tutorial-only demos.
+- Preserve enough context that a new Codex thread can continue without guessing.
 
 ## How This Repo Should Be Used
 
@@ -31,6 +32,18 @@ For every new project:
 9. Test, review, commit, and reflect before moving on.
 
 See [docs/new-project.md](docs/new-project.md) for the exact start sequence.
+
+## New Thread Handoff
+
+Before continuing from another Codex thread, read:
+
+- `AGENTS.md`
+- `docs/session-handoff.md`
+- `docs/validation-protocol.md`
+- the latest git log
+
+Markers, UUIDs, task IDs, and session IDs are not automatically git commits.
+Resolve the marker first, then validate the intended scope.
 
 ## Operating Model
 
@@ -72,6 +85,7 @@ examples/                 Filled-in examples of the starter workflow
 - Keep agent instructions compact.
 - Give agents concrete verification commands.
 - Evaluate AI quality with tests, manual examples, and traces.
+- Make handoffs explicit when work must continue across Codex threads.
 - Review AI-generated code like code from a junior engineer.
 - Ship small vertical slices.
 - Reflect after each project and improve the workflow.

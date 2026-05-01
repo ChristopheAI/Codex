@@ -28,7 +28,9 @@ when the project works.
 9. Use `templates/task.md` when handing one task to Codex.
 10. Build through the loop in `docs/implementation-loop.md`.
 11. Review with `templates/review-checklist.md`.
-12. Record only the learnings that should change future project defaults.
+12. Update `docs/session-handoff.md` when another Codex thread may need to
+    continue the work.
+13. Record only the learnings that should change future project defaults.
 
 ## Bootstrap Checklist
 
@@ -50,6 +52,8 @@ AGENTS.md
 docs/new-project.md
 docs/implementation-loop.md
 docs/ai-system-defaults.md
+docs/session-handoff.md
+docs/validation-protocol.md
 scripts/new-project.sh
 scripts/validate-starter.sh
 templates/project-brief.md
@@ -86,7 +90,21 @@ new idea
   -> verification
   -> self-review and fresh review
   -> commit
+  -> handoff update
   -> reflection
+```
+
+## Thread Continuation Pattern
+
+```text
+new thread
+  -> read AGENTS.md
+  -> read docs/session-handoff.md
+  -> read docs/validation-protocol.md
+  -> inspect git state
+  -> resolve any marker
+  -> validate intended scope
+  -> continue with the next smallest action
 ```
 
 ## What Learnings Are For
