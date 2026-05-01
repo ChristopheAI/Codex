@@ -28,13 +28,13 @@ when the project works.
 8. Use `templates/plan.md` when the work needs multiple small tasks.
 9. Use `templates/task.md` when handing one task to Codex.
 10. Commit the planning artifacts as the project baseline.
-11. Build through the loop in `docs/implementation-loop.md`.
-12. Review with `templates/review-checklist.md`.
-13. Update `docs/session-handoff.md` when another Codex thread may need to
-    continue the work.
-14. Close out V1 with `templates/reflection.md`.
-15. Decide whether to stop, polish, or extend.
-16. Record only the learnings that should change future project defaults.
+11. Update `docs/session-handoff.md` with the actual baseline commit.
+12. Build through the loop in `docs/implementation-loop.md`.
+13. Review with `templates/review-checklist.md`.
+14. After each durable task commit, update `docs/session-handoff.md`.
+15. Close out V1 with `templates/reflection.md`.
+16. Decide whether to stop, polish, or extend.
+17. Record only the learnings that should change future project defaults.
 
 ## Bootstrap Checklist
 
@@ -47,6 +47,7 @@ when the project works.
 - [ ] First task is small enough to build and review.
 - [ ] `scripts/validate.sh` is adapted to the project.
 - [ ] Verification command or manual check is known.
+- [ ] Handoff checkpoint rule is understood after every durable commit.
 - [ ] V1 closeout path is known: handoff update plus reflection.
 
 ## What To Copy Into A New Project
@@ -101,7 +102,7 @@ new idea
   -> sh scripts/validate.sh
   -> self-review and fresh review
   -> commit
-  -> handoff update
+  -> handoff checkpoint update
   -> V1 closeout
   -> stop, polish, or extend
 ```

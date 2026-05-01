@@ -116,6 +116,11 @@ This keeps the source of truth in Git before the first code commit. A Task 1
 implementation commit should never be the first durable record of what the
 project is supposed to do.
 
+After this commit exists, update `docs/session-handoff.md` with the actual
+planning baseline commit hash, validation result, known gaps, and next
+recommended action. If that requires a tiny follow-up docs commit, keep it
+limited to the handoff file.
+
 ## Step 6: Build With Codex
 
 Only now should Codex start implementing.
@@ -130,6 +135,12 @@ Do not implement yet.
 ```
 
 Then review the plan before building.
+
+After each durable implementation commit, update `docs/session-handoff.md`
+before starting another task. Record the actual meaningful commit hash, what
+was validated, what remains risky or incomplete, and the next smallest action.
+Handoff-only commits should not create an infinite loop; they exist to make the
+previous meaningful checkpoint resumable.
 
 ## Step 7: Verify And Review
 

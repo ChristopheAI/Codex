@@ -20,15 +20,21 @@ Describe the smallest useful version currently being built.
 
 ## Latest Durable Checkpoint
 
-Update this section at the end of meaningful sessions. Verify exact state with
-`git status --short --branch` and `git log --oneline -5`.
+Update this section after every durable project commit and at the end of
+meaningful sessions. Verify exact state with `git status --short --branch` and
+`git log --oneline -5`.
 
 - Current branch:
-- Latest local commit:
+- Latest meaningful project commit:
+- Latest handoff/checkpoint update:
 - Latest pushed commit:
-- What was validated:
+- Validation command and result:
 - Known gaps:
 - Next recommended action:
+
+Use "Latest meaningful project commit" for planning baseline, implementation,
+review, or closeout commits. A handoff-only commit can be recorded separately;
+do not create an infinite loop just to record the handoff commit itself.
 
 ## Active Markers
 
@@ -47,4 +53,5 @@ Do not assume a UUID is a git commit. Resolve it before validating.
 - [ ] Record validation commands and outcomes.
 - [ ] Record marker meanings introduced in chat.
 - [ ] Record the next smallest action.
+- [ ] Confirm the handoff reflects the latest meaningful project commit.
 - [ ] Keep this file short enough for a new thread to read quickly.

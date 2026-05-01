@@ -47,6 +47,10 @@ Then each implementation task can be reviewed against the committed source of
 truth. Do not let the first code commit become the first durable record of the
 project intent.
 
+After the planning baseline commit exists, update `docs/session-handoff.md` so
+a new thread can see the actual baseline commit, validation result, known gaps,
+and next action without reconstructing it from chat.
+
 ## Think First
 
 Use a planning pause before code when the task:
@@ -133,6 +137,24 @@ scope control.
 Non-trivial work also gets spec review before execution. Check that the spec
 surfaces decisions, invariants, file paths, and out-of-scope boundaries before
 Codex writes code.
+
+## Handoff Checkpoint
+
+After every durable project commit, update `docs/session-handoff.md` before
+expanding scope.
+
+Record:
+
+- the actual latest meaningful project commit
+- the validation command and result
+- known gaps or residual risks
+- the next recommended action
+
+This applies after planning baseline commits, implementation task commits, and
+V1 closeout commits. If the update happens as a small handoff-only commit, do
+not chase an infinite loop by making another handoff commit for that commit.
+The goal is that the previous meaningful checkpoint is resumable from the repo
+without reading chat.
 
 ## V1 Closeout
 

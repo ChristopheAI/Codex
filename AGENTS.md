@@ -53,6 +53,9 @@ Use the lightest useful process:
 - Prefer the simplest AI pattern that works: SDK call, then workflow, then
   agent only when the path is genuinely unknown.
 - Cross-thread context belongs in `docs/session-handoff.md`, not only in chat.
+- After every durable project commit, update `docs/session-handoff.md` with the
+  actual latest meaningful commit, validation result, known gaps, and next
+  recommended action before expanding scope.
 - When asked to validate from a marker, use `docs/validation-protocol.md` and
   resolve the marker before running generic checks.
 - Learnings should end with a concrete change to templates, docs, workflow, or

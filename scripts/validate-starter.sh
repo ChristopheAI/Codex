@@ -46,8 +46,13 @@ grep -q "Project Session Handoff" templates/project-session-handoff.md
 grep -q "Project Reflection" templates/reflection.md
 grep -q ".env" templates/project-gitignore
 grep -q "V1 Closeout" docs/implementation-loop.md
+grep -q "Handoff Checkpoint" docs/implementation-loop.md
 grep -q "Close Out V1" docs/new-project.md
+grep -q "After each durable implementation commit" docs/new-project.md
 grep -q "stop, polish, or extend" docs/starter-kit.md
+grep -q "Handoff checkpoint rule" docs/starter-kit.md
+grep -q "Latest meaningful project commit" templates/project-session-handoff.md
+grep -q "Validation command and result" templates/project-session-handoff.md
 grep -q "templates/project-validate.sh" scripts/new-project.sh
 grep -q "templates/project-session-handoff.md" scripts/new-project.sh
 grep -q "templates/project-gitignore" scripts/new-project.sh
