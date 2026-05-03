@@ -8,15 +8,23 @@ docs/new-project.md
 docs/starter-kit.md
 docs/codex-app-workflow.md
 docs/codex-desktop-operating-model.md
+docs/codex-full-course-coverage.md
 docs/implementation-loop.md
 docs/ai-system-defaults.md
 docs/session-handoff.md
 docs/validation-protocol.md
+docs/codex-desktop-ui-map.md
+docs/codex-context-compaction.md
+docs/codex-permissions-guardrails.md
+docs/codex-primitives-chooser.md
+docs/codex-skills-playbook.md
+docs/codex-automations-playbook.md
 templates/project-brief.md
 templates/spec.md
 templates/ai-system-spec.md
 templates/plan.md
 templates/task.md
+templates/github-issue.md
 templates/review-checklist.md
 templates/project-gitignore
 templates/project-session-handoff.md
@@ -32,10 +40,20 @@ done
 
 grep -q "Codex Project Starter Kit" README.md
 grep -q "codex-desktop-operating-model.md" README.md
+grep -q "codex-full-course-coverage.md" README.md
 grep -q "Do not start with code" docs/new-project.md
 grep -q "Project Brief" templates/project-brief.md
 grep -q "Codex Desktop Operating Model" docs/codex-desktop-operating-model.md
 grep -q "Access vs Workflow" docs/codex-desktop-operating-model.md
+grep -q "Codex Full Course Coverage" docs/codex-full-course-coverage.md
+grep -q "Highest-Value Course-Derived Artifacts" docs/codex-full-course-coverage.md
+grep -q "Codex Desktop UI Map" docs/codex-desktop-ui-map.md
+grep -q "Codex Context And Compaction" docs/codex-context-compaction.md
+grep -q "Codex Permissions And Guardrails" docs/codex-permissions-guardrails.md
+grep -q "Codex Primitives Chooser" docs/codex-primitives-chooser.md
+grep -q "Codex Skills Playbook" docs/codex-skills-playbook.md
+grep -q "Codex Automations Playbook" docs/codex-automations-playbook.md
+grep -q "GitHub Issue" templates/github-issue.md
 grep -q "project brief" AGENTS.md
 grep -q "planning baseline" AGENTS.md
 grep -q "think first" docs/implementation-loop.md

@@ -163,6 +163,7 @@ Capture learnings only when they improve future behavior:
 
 ## Related Docs
 
+- `docs/codex-full-course-coverage.md`
 - `docs/starter-kit.md`
 - `docs/codex-app-workflow.md`
 - `docs/implementation-loop.md`

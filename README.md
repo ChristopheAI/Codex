@@ -61,6 +61,8 @@ hold the output to professional software standards.
 
 See [docs/codex-desktop-operating-model.md](docs/codex-desktop-operating-model.md)
 for how that lifecycle maps onto the Codex Desktop app surface.
+See [docs/codex-full-course-coverage.md](docs/codex-full-course-coverage.md)
+for the gap map between the five-part course and this starter kit.
 
 ## Repository Map
 

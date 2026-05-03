@@ -61,6 +61,12 @@ docs/implementation-loop.md
 docs/ai-system-defaults.md
 docs/session-handoff.md
 docs/validation-protocol.md
+docs/codex-desktop-ui-map.md
+docs/codex-context-compaction.md
+docs/codex-permissions-guardrails.md
+docs/codex-primitives-chooser.md
+docs/codex-skills-playbook.md
+docs/codex-automations-playbook.md
 scripts/new-project.sh
 scripts/validate-starter.sh
 templates/project-brief.md
@@ -68,6 +74,7 @@ templates/spec.md
 templates/ai-system-spec.md
 templates/plan.md
 templates/task.md
+templates/github-issue.md
 templates/review-checklist.md
 templates/project-gitignore
 templates/project-session-handoff.md
@@ -78,6 +85,7 @@ templates/reflection.md
 Optional:
 
 ```text
+docs/codex-full-course-coverage.md
 docs/codex-desktop-operating-model.md
 docs/owain-operating-model.md
 docs/roadmap.md
