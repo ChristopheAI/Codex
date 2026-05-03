@@ -2,7 +2,8 @@
 
 ## Purpose
 
-Translate the five-part Codex Desktop course into the Maximize Codex workflow.
+Translate the five-part Codex Desktop course into the Codex Operating Base
+workflow.
 
 This document is the bridge between the starter-kit lifecycle and the actual
 Codex app surface. The goal is not to collect course notes. The goal is to make
@@ -10,7 +11,7 @@ Codex Desktop easier to use as a disciplined project workspace.
 
 ## The Merge
 
-Maximize Codex provides the lifecycle:
+Codex Operating Base provides the lifecycle:
 
 ```text
 brief -> spec -> plan -> baseline commit -> build -> test -> review -> ship -> reflect
