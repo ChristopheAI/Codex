@@ -7,6 +7,7 @@ AGENTS.md
 docs/new-project.md
 docs/starter-kit.md
 docs/codex-app-workflow.md
+docs/codex-desktop-operating-model.md
 docs/implementation-loop.md
 docs/ai-system-defaults.md
 docs/session-handoff.md
@@ -30,8 +31,11 @@ for file in $required_files; do
 done
 
 grep -q "Codex Project Starter Kit" README.md
+grep -q "codex-desktop-operating-model.md" README.md
 grep -q "Do not start with code" docs/new-project.md
 grep -q "Project Brief" templates/project-brief.md
+grep -q "Codex Desktop Operating Model" docs/codex-desktop-operating-model.md
+grep -q "Access vs Workflow" docs/codex-desktop-operating-model.md
 grep -q "project brief" AGENTS.md
 grep -q "planning baseline" AGENTS.md
 grep -q "think first" docs/implementation-loop.md

@@ -59,6 +59,9 @@ Codex is strongest when the work is shaped well before implementation starts.
 The goal is to give the agent small, reviewable, verifiable tasks and then
 hold the output to professional software standards.
 
+See [docs/codex-desktop-operating-model.md](docs/codex-desktop-operating-model.md)
+for how that lifecycle maps onto the Codex Desktop app surface.
+
 ## Repository Map
 
 ```text

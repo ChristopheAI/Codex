@@ -78,6 +78,7 @@ templates/reflection.md
 Optional:
 
 ```text
+docs/codex-desktop-operating-model.md
 docs/owain-operating-model.md
 docs/roadmap.md
 learnings/
