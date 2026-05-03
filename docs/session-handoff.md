@@ -32,33 +32,35 @@ commit state with `git status --short --branch` and `git log --oneline`.
 
 - Latest pushed branch: `origin/main`
 - Latest pushed commit:
-  - `888546c docs: update handoff checkpoint learning`
+  - `c188274 docs: update codex desktop handoff`
 - Latest meaningful local checkpoint before this handoff update:
-  - `a888628 docs: add codex desktop operating model`
-- Active project or experiment: Codex Desktop operating model synthesis from
-  the five-part Codex full course PDF.
+  - `780b1e2 docs: expand codex course coverage`
+- Active project or experiment: broader Codex full course coverage extraction
+  into starter-kit docs and templates.
 - What was validated:
-  - Added `docs/codex-desktop-operating-model.md` to connect the starter-kit
-    lifecycle with the Codex Desktop app execution surface.
-  - Linked the new operating model from `README.md` and `docs/starter-kit.md`.
-  - Updated `scripts/validate-starter.sh` so the new document and README link
-    are required by starter-kit validation.
-  - Checked the new model against the PDF sections for the five-part map,
-    decision ladder, access-vs-workflow split, live smoke tests, and shipping
-    checklist.
-  - Fresh checks for the Codex Desktop operating model:
+  - Added `docs/codex-full-course-coverage.md` to map all 24 PDF sections to
+    starter-kit coverage and remaining external/current-docs boundaries.
+  - Added course-derived docs for Desktop UI, context/compaction, permissions,
+    primitive choice, skills, and automations.
+  - Added `templates/github-issue.md` for one-outcome, verifiable GitHub
+    issues.
+  - Updated `README.md`, `docs/starter-kit.md`, and
+    `scripts/validate-starter.sh` so the new coverage layer is discoverable and
+    validated.
+  - Fresh checks for the expanded Codex course coverage:
     - `git diff --check`
     - `sh scripts/validate-starter.sh`
     - `sh -n scripts/validate-starter.sh && sh -n scripts/new-project.sh &&
       sh -n templates/project-validate.sh`
-    - fresh-start copy check in `/tmp/maximize-codex-push.PFb0QP`
+    - fresh-start copy check in `/tmp/maximize-codex-full-course.99iE0v`
 - Known gaps:
-  - `a888628` and this handoff update are local until intentionally pushed.
-  - Existing project smoke checks are still project-specific; the starter kit
-    provides the pattern, not a universal browser runner.
+  - `780b1e2` and this handoff update are local until intentionally pushed.
+  - The repo now distills broad PDF coverage, but it intentionally does not
+    mirror the course slide-by-slide or freeze changing details such as pricing,
+    model availability, platform limits, or external setup screens.
   - No active user-defined markers are currently documented.
 - Next recommended action:
-  - Push the Codex Desktop operating model commits to `origin/main`.
+  - Push the expanded course coverage commits to `origin/main`.
   - Keep validating from a fresh clone after each starter-kit workflow change.
 
 ## Active Context Markers
