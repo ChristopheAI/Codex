@@ -32,35 +32,31 @@ commit state with `git status --short --branch` and `git log --oneline`.
 
 - Latest pushed branch: `origin/main`
 - Latest pushed commit:
-  - `c188274 docs: update codex desktop handoff`
+  - `1d93cd8 docs: update course coverage handoff`
 - Latest meaningful local checkpoint before this handoff update:
-  - `780b1e2 docs: expand codex course coverage`
-- Active project or experiment: broader Codex full course coverage extraction
-  into starter-kit docs and templates.
+  - `21234b0 docs: rename workflow to codex operating base`
+- Active project or experiment: local workspace renamed from
+  `Maximize Codex` to `Codex Operating Base`.
 - What was validated:
-  - Added `docs/codex-full-course-coverage.md` to map all 24 PDF sections to
-    starter-kit coverage and remaining external/current-docs boundaries.
-  - Added course-derived docs for Desktop UI, context/compaction, permissions,
-    primitive choice, skills, and automations.
-  - Added `templates/github-issue.md` for one-outcome, verifiable GitHub
-    issues.
-  - Updated `README.md`, `docs/starter-kit.md`, and
-    `scripts/validate-starter.sh` so the new coverage layer is discoverable and
-    validated.
-  - Fresh checks for the expanded Codex course coverage:
+  - Renamed local repo folder to
+    `/Users/christophe/Projects/Codex Operating Base`.
+  - Confirmed `/Users/christophe/Projects/Maximize Codex` no longer exists and
+    the new folder contains the Git repo.
+  - Confirmed `HEAD` still matches `origin/main` before the doc rename.
+  - Updated `docs/codex-desktop-operating-model.md` so the workflow name matches
+    Codex Operating Base.
+  - Confirmed there are no remaining outdated `Maximize Codex` or old absolute
+    path references outside this handoff note.
+  - Fresh checks for the workspace rename:
     - `git diff --check`
     - `sh scripts/validate-starter.sh`
-    - `sh -n scripts/validate-starter.sh && sh -n scripts/new-project.sh &&
-      sh -n templates/project-validate.sh`
-    - fresh-start copy check in `/tmp/maximize-codex-full-course.99iE0v`
 - Known gaps:
-  - `780b1e2` and this handoff update are local until intentionally pushed.
-  - The repo now distills broad PDF coverage, but it intentionally does not
-    mirror the course slide-by-slide or freeze changing details such as pricing,
-    model availability, platform limits, or external setup screens.
+  - `21234b0` and this handoff update are local until intentionally pushed.
+  - GitHub repository URL remains `https://github.com/ChristopheAI/Codex.git`;
+    only the local workspace folder was renamed.
   - No active user-defined markers are currently documented.
 - Next recommended action:
-  - Push the expanded course coverage commits to `origin/main`.
+  - Push the Codex Operating Base rename commits to `origin/main`.
   - Keep validating from a fresh clone after each starter-kit workflow change.
 
 ## Active Context Markers
