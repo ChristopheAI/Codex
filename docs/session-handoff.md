@@ -32,33 +32,33 @@ commit state with `git status --short --branch` and `git log --oneline`.
 
 - Latest pushed branch: `origin/main`
 - Latest pushed commit:
-  - `2b85d2c docs: update closeout handoff checkpoint`
+  - `888546c docs: update handoff checkpoint learning`
 - Latest meaningful local checkpoint before this handoff update:
-  - `45a528d docs: require handoff checkpoints after durable commits`
-- Active project or experiment: repeated handoff checkpoint backport from
-  `meeting-cost-calculator` and `simple-invoice-tracker`.
+  - `a888628 docs: add codex desktop operating model`
+- Active project or experiment: Codex Desktop operating model synthesis from
+  the five-part Codex full course PDF.
 - What was validated:
-  - `meeting-cost-calculator` needed a handoff fix after Task 1.
-  - `simple-invoice-tracker` needed a handoff fix after the planning baseline
-    and again after Task 1.
-  - `45a528d` backports that repeated learning into `AGENTS.md`,
-    `docs/new-project.md`, `docs/implementation-loop.md`,
-    `docs/starter-kit.md`, `templates/project-session-handoff.md`, and
-    `scripts/validate-starter.sh`.
-  - Fresh checks for the handoff checkpoint backport:
+  - Added `docs/codex-desktop-operating-model.md` to connect the starter-kit
+    lifecycle with the Codex Desktop app execution surface.
+  - Linked the new operating model from `README.md` and `docs/starter-kit.md`.
+  - Updated `scripts/validate-starter.sh` so the new document and README link
+    are required by starter-kit validation.
+  - Checked the new model against the PDF sections for the five-part map,
+    decision ladder, access-vs-workflow split, live smoke tests, and shipping
+    checklist.
+  - Fresh checks for the Codex Desktop operating model:
     - `git diff --check`
     - `sh scripts/validate-starter.sh`
     - `sh -n scripts/validate-starter.sh && sh -n scripts/new-project.sh &&
       sh -n templates/project-validate.sh`
-    - fresh-start copy check in `/tmp/codex-handoff-check.*`
+    - fresh-start copy check in `/tmp/maximize-codex-push.PFb0QP`
 - Known gaps:
-  - `45a528d` and this handoff update are local until intentionally pushed.
+  - `a888628` and this handoff update are local until intentionally pushed.
   - Existing project smoke checks are still project-specific; the starter kit
     provides the pattern, not a universal browser runner.
   - No active user-defined markers are currently documented.
 - Next recommended action:
-  - Push the starter-kit handoff checkpoint commits when the user explicitly
-    asks.
+  - Push the Codex Desktop operating model commits to `origin/main`.
   - Keep validating from a fresh clone after each starter-kit workflow change.
 
 ## Active Context Markers
