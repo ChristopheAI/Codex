@@ -28,6 +28,7 @@ templates/ai-system-spec.md
 templates/plan.md
 templates/task.md
 templates/github-issue.md
+templates/github-actions-ci.yml
 templates/review-checklist.md
 templates/project-gitignore
 templates/project-agents.md
@@ -65,6 +66,8 @@ grep -q "Private Vercel AI Tool Pattern" docs/patterns/private-vercel-ai-tool.md
 grep -q "Bavast Vercel Case Study" projects/bavast-vercel.md
 grep -q "private Vercel AI tool" projects/README.md
 grep -q "GitHub Issue" templates/github-issue.md
+grep -q "Project CI" templates/github-actions-ci.yml
+grep -q "sh scripts/validate.sh" templates/github-actions-ci.yml
 grep -q "project brief" AGENTS.md
 grep -q "planning baseline" AGENTS.md
 grep -q "think first" docs/implementation-loop.md
@@ -95,6 +98,7 @@ grep -q "templates/project-agents.md" scripts/new-project.sh
 grep -q "templates/project-production-checklist.md" scripts/new-project.sh
 grep -q "templates/project-status.mjs" scripts/new-project.sh
 grep -q "templates/project-verify-production.mjs" scripts/new-project.sh
+grep -q "templates/github-actions-ci.yml" scripts/new-project.sh
 grep -q "templates/project-session-handoff.md" scripts/new-project.sh
 grep -q "templates/project-gitignore" scripts/new-project.sh
 

@@ -1,0 +1,29 @@
+name: Project CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: project-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Project validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Add project-specific setup before validation, for example:
+      # - actions/setup-node for Node projects
+      # - actions/setup-python for Python projects
+      # - npm ci, pip install, database service containers, or browser setup
+
+      - name: Validate
+        run: sh scripts/validate.sh

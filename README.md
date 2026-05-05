@@ -76,6 +76,7 @@ templates/                Project brief, specs, plans, review checklists
 learnings/                Supporting synthesis that improves the starter kit
 projects/                 Example or proof projects built end to end
 examples/                 Filled-in examples of the starter workflow
+.github/workflows/        Project CI once copied into a real project
 ```
 
 ## Current Focus
@@ -87,6 +88,7 @@ examples/                 Filled-in examples of the starter workflow
 5. Extract proven Bavast/Vercel practices into reusable project defaults.
 6. Give every serious project a control plane: `AGENTS.md`, handoff, ops
    checklist, validation, production verification, and one status command.
+7. Make CI run the project validation command by default.
 
 ## Principles
 

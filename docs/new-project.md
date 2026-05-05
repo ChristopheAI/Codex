@@ -33,6 +33,7 @@ The starter script creates:
 - `scripts/project-status.mjs`
 - `scripts/validate.sh`
 - `scripts/verify-production.mjs`
+- `.github/workflows/ci.yml`
 - `.gitignore`
 
 Then fill it in.
@@ -111,6 +112,10 @@ If the project has production or will soon have production, also adapt
 `scripts/verify-production.mjs` and `docs/ops/production-checklist.md`.
 For Node projects, expose `node scripts/project-status.mjs` as `npm run status`.
 
+Adapt `.github/workflows/ci.yml` once the stack is known. The default workflow
+runs `sh scripts/validate.sh`; add Node, Python, browser, database, or service
+setup before that validation step as needed.
+
 ## Step 5: Commit The Planning Baseline
 
 Before implementation, commit the planning artifacts that define the work.
@@ -125,6 +130,7 @@ At minimum, commit:
 - `docs/session-handoff.md`
 - `docs/ops/production-checklist.md`
 - control-plane scripts under `scripts/`
+- `.github/workflows/ci.yml`
 
 Suggested commit message:
 

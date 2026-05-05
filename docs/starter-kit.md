@@ -18,7 +18,7 @@ when the project works.
 1. Create a new repo or folder from this starter kit.
 2. Run `sh scripts/new-project.sh` to create the project brief, handoff file,
    control-plane files, validation script, production verification placeholder,
-   and `.gitignore`.
+   GitHub Actions CI placeholder, and `.gitignore`.
 3. Fill in the project brief.
 4. Adapt `AGENTS.md` from that brief.
 5. Decide whether the first task needs a spec.
@@ -51,6 +51,7 @@ when the project works.
 - [ ] `docs/ops/production-checklist.md` records production posture or says
       production does not exist yet.
 - [ ] `scripts/verify-production.mjs` is adapted once production exists.
+- [ ] `.github/workflows/ci.yml` runs the project validation command in CI.
 - [ ] Verification command or manual check is known.
 - [ ] Handoff checkpoint rule is understood after every durable commit.
 - [ ] V1 closeout path is known: handoff update plus reflection.
@@ -81,6 +82,7 @@ templates/ai-system-spec.md
 templates/plan.md
 templates/task.md
 templates/github-issue.md
+templates/github-actions-ci.yml
 templates/review-checklist.md
 templates/project-agents.md
 templates/project-production-checklist.md

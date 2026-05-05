@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-mkdir -p docs docs/ops scripts
+mkdir -p .github/workflows docs docs/ops scripts
 
 if [ -f docs/project-brief.md ]; then
   echo "docs/project-brief.md already exists"
@@ -55,4 +55,9 @@ fi
 if [ ! -f .gitignore ]; then
   cp templates/project-gitignore .gitignore
   echo "Created .gitignore"
+fi
+
+if [ ! -f .github/workflows/ci.yml ]; then
+  cp templates/github-actions-ci.yml .github/workflows/ci.yml
+  echo "Created .github/workflows/ci.yml"
 fi
