@@ -19,6 +19,7 @@ docs/codex-permissions-guardrails.md
 docs/codex-primitives-chooser.md
 docs/codex-skills-playbook.md
 docs/codex-automations-playbook.md
+docs/project-control-plane.md
 docs/patterns/private-vercel-ai-tool.md
 projects/bavast-vercel.md
 templates/project-brief.md
@@ -29,8 +30,12 @@ templates/task.md
 templates/github-issue.md
 templates/review-checklist.md
 templates/project-gitignore
+templates/project-agents.md
+templates/project-production-checklist.md
+templates/project-status.mjs
 templates/project-session-handoff.md
 templates/project-validate.sh
+templates/project-verify-production.mjs
 templates/reflection.md
 scripts/new-project.sh
 scripts/validate-starter.sh
@@ -55,6 +60,7 @@ grep -q "Codex Permissions And Guardrails" docs/codex-permissions-guardrails.md
 grep -q "Codex Primitives Chooser" docs/codex-primitives-chooser.md
 grep -q "Codex Skills Playbook" docs/codex-skills-playbook.md
 grep -q "Codex Automations Playbook" docs/codex-automations-playbook.md
+grep -q "Project Control Plane" docs/project-control-plane.md
 grep -q "Private Vercel AI Tool Pattern" docs/patterns/private-vercel-ai-tool.md
 grep -q "Bavast Vercel Case Study" projects/bavast-vercel.md
 grep -q "private Vercel AI tool" projects/README.md
@@ -69,7 +75,11 @@ grep -q "Marker Resolution" docs/validation-protocol.md
 grep -q "AI System Spec" templates/ai-system-spec.md
 grep -q "Acceptance Criteria" templates/task.md
 grep -q "Project Validation" templates/project-validate.sh
+grep -q "Project Control Plane" templates/project-agents.md
+grep -q "Production Checklist" templates/project-production-checklist.md
+grep -q "Project Control Plane" templates/project-status.mjs
 grep -q "Project Session Handoff" templates/project-session-handoff.md
+grep -q "Project Production Verification" templates/project-verify-production.mjs
 grep -q "Project Reflection" templates/reflection.md
 grep -q ".env" templates/project-gitignore
 grep -q "V1 Closeout" docs/implementation-loop.md
@@ -81,6 +91,10 @@ grep -q "Handoff checkpoint rule" docs/starter-kit.md
 grep -q "Latest meaningful project commit" templates/project-session-handoff.md
 grep -q "Validation command and result" templates/project-session-handoff.md
 grep -q "templates/project-validate.sh" scripts/new-project.sh
+grep -q "templates/project-agents.md" scripts/new-project.sh
+grep -q "templates/project-production-checklist.md" scripts/new-project.sh
+grep -q "templates/project-status.mjs" scripts/new-project.sh
+grep -q "templates/project-verify-production.mjs" scripts/new-project.sh
 grep -q "templates/project-session-handoff.md" scripts/new-project.sh
 grep -q "templates/project-gitignore" scripts/new-project.sh
 

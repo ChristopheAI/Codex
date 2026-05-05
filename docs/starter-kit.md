@@ -17,7 +17,8 @@ when the project works.
 
 1. Create a new repo or folder from this starter kit.
 2. Run `sh scripts/new-project.sh` to create the project brief, handoff file,
-   validation script, and `.gitignore`.
+   control-plane files, validation script, production verification placeholder,
+   and `.gitignore`.
 3. Fill in the project brief.
 4. Adapt `AGENTS.md` from that brief.
 5. Decide whether the first task needs a spec.
@@ -46,6 +47,10 @@ when the project works.
 - [ ] `AGENTS.md` reflects the project, not this starter repo.
 - [ ] First task is small enough to build and review.
 - [ ] `scripts/validate.sh` is adapted to the project.
+- [ ] `scripts/project-status.mjs` gives a useful control-plane summary.
+- [ ] `docs/ops/production-checklist.md` records production posture or says
+      production does not exist yet.
+- [ ] `scripts/verify-production.mjs` is adapted once production exists.
 - [ ] Verification command or manual check is known.
 - [ ] Handoff checkpoint rule is understood after every durable commit.
 - [ ] V1 closeout path is known: handoff update plus reflection.
@@ -67,6 +72,7 @@ docs/codex-permissions-guardrails.md
 docs/codex-primitives-chooser.md
 docs/codex-skills-playbook.md
 docs/codex-automations-playbook.md
+docs/project-control-plane.md
 scripts/new-project.sh
 scripts/validate-starter.sh
 templates/project-brief.md
@@ -76,9 +82,13 @@ templates/plan.md
 templates/task.md
 templates/github-issue.md
 templates/review-checklist.md
+templates/project-agents.md
+templates/project-production-checklist.md
+templates/project-status.mjs
 templates/project-gitignore
 templates/project-session-handoff.md
 templates/project-validate.sh
+templates/project-verify-production.mjs
 templates/reflection.md
 ```
 
@@ -109,6 +119,7 @@ new idea
   -> think first
   -> Codex implementation
   -> sh scripts/validate.sh
+  -> node scripts/project-status.mjs
   -> self-review and fresh review
   -> commit
   -> handoff checkpoint update

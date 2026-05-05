@@ -27,8 +27,12 @@ sh scripts/new-project.sh
 The starter script creates:
 
 - `docs/project-brief.md`
+- project-specific `AGENTS.md`
 - `docs/session-handoff.md`
+- `docs/ops/production-checklist.md`
+- `scripts/project-status.mjs`
 - `scripts/validate.sh`
+- `scripts/verify-production.mjs`
 - `.gitignore`
 
 Then fill it in.
@@ -53,6 +57,15 @@ Update `AGENTS.md` so Codex knows the project-specific context:
 - what is out of scope
 
 Keep it short. Reference source files instead of duplicating them.
+
+For resumability, keep the Project Control Plane files aligned:
+
+- `AGENTS.md`
+- `docs/session-handoff.md`
+- `docs/ops/production-checklist.md`
+- `scripts/project-status.mjs`
+
+See `docs/project-control-plane.md` for the pattern.
 
 ## Step 3: Decide Whether A Spec Is Needed
 
@@ -94,6 +107,10 @@ the strongest practical checks for this project. Keep it simple at first, then
 expand it as the project gains tests, API checks, UI smoke checks, evals, or
 deployment checks.
 
+If the project has production or will soon have production, also adapt
+`scripts/verify-production.mjs` and `docs/ops/production-checklist.md`.
+For Node projects, expose `node scripts/project-status.mjs` as `npm run status`.
+
 ## Step 5: Commit The Planning Baseline
 
 Before implementation, commit the planning artifacts that define the work.
@@ -105,6 +122,9 @@ At minimum, commit:
 - `docs/ai-system-spec.md`, if the project uses AI
 - the active task plan
 - project-specific `AGENTS.md` updates
+- `docs/session-handoff.md`
+- `docs/ops/production-checklist.md`
+- control-plane scripts under `scripts/`
 
 Suggested commit message:
 
@@ -120,6 +140,12 @@ After this commit exists, update `docs/session-handoff.md` with the actual
 planning baseline commit hash, validation result, known gaps, and next
 recommended action. If that requires a tiny follow-up docs commit, keep it
 limited to the handoff file.
+
+Before continuing in a later thread, run:
+
+```bash
+node scripts/project-status.mjs
+```
 
 ## Step 6: Build With Codex
 

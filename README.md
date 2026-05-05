@@ -69,6 +69,8 @@ for the gap map between the five-part course and this starter kit.
 ```text
 AGENTS.md                 Base instructions for Codex
 docs/                     New-project workflow, roadmap, operating models
+docs/project-control-plane.md
+                          Reusable status, handoff, validation, and production cockpit
 docs/patterns/            Reusable production and project patterns
 templates/                Project brief, specs, plans, review checklists
 learnings/                Supporting synthesis that improves the starter kit
@@ -83,6 +85,8 @@ examples/                 Filled-in examples of the starter workflow
 3. Add example projects that prove the workflow works.
 4. Add deployment, eval, observability, and client-ready patterns over time.
 5. Extract proven Bavast/Vercel practices into reusable project defaults.
+6. Give every serious project a control plane: `AGENTS.md`, handoff, ops
+   checklist, validation, production verification, and one status command.
 
 ## Principles
 
