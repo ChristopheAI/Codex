@@ -69,6 +69,7 @@ for the gap map between the five-part course and this starter kit.
 ```text
 AGENTS.md                 Base instructions for Codex
 docs/                     New-project workflow, roadmap, operating models
+docs/patterns/            Reusable production and project patterns
 templates/                Project brief, specs, plans, review checklists
 learnings/                Supporting synthesis that improves the starter kit
 projects/                 Example or proof projects built end to end
@@ -81,6 +82,7 @@ examples/                 Filled-in examples of the starter workflow
 2. Convert Owain's AI Engineer material into practical engineering defaults.
 3. Add example projects that prove the workflow works.
 4. Add deployment, eval, observability, and client-ready patterns over time.
+5. Extract proven Bavast/Vercel practices into reusable project defaults.
 
 ## Principles
 

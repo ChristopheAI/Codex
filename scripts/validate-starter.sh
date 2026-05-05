@@ -19,6 +19,8 @@ docs/codex-permissions-guardrails.md
 docs/codex-primitives-chooser.md
 docs/codex-skills-playbook.md
 docs/codex-automations-playbook.md
+docs/patterns/private-vercel-ai-tool.md
+projects/bavast-vercel.md
 templates/project-brief.md
 templates/spec.md
 templates/ai-system-spec.md
@@ -53,6 +55,9 @@ grep -q "Codex Permissions And Guardrails" docs/codex-permissions-guardrails.md
 grep -q "Codex Primitives Chooser" docs/codex-primitives-chooser.md
 grep -q "Codex Skills Playbook" docs/codex-skills-playbook.md
 grep -q "Codex Automations Playbook" docs/codex-automations-playbook.md
+grep -q "Private Vercel AI Tool Pattern" docs/patterns/private-vercel-ai-tool.md
+grep -q "Bavast Vercel Case Study" projects/bavast-vercel.md
+grep -q "private Vercel AI tool" projects/README.md
 grep -q "GitHub Issue" templates/github-issue.md
 grep -q "project brief" AGENTS.md
 grep -q "planning baseline" AGENTS.md

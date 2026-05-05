@@ -13,3 +13,9 @@ Each project should include:
 - reflection
 
 Start small, but make it real enough to inspect.
+
+## Case Studies
+
+- [Bavast Vercel](bavast-vercel.md): private Vercel AI tool with app-level
+  auth, Blob-backed artifacts, audit logging, deployment hardening, and live
+  verification.
