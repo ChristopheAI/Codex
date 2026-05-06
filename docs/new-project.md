@@ -9,6 +9,11 @@ Do not start with code.
 
 Start with the project brief.
 
+Use `docs/ai-project-sop.md` as the agent-readable standard operating
+procedure for this workflow. It compresses the project brief, control plane,
+spec, plan, validation, review, handoff, and closeout rules into one document
+that Codex can read before starting a new project.
+
 ## Step 1: Create The Project Brief
 
 Copy the template:
@@ -160,7 +165,7 @@ Only now should Codex start implementing.
 Good first prompt:
 
 ```text
-Read docs/project-brief.md and AGENTS.md.
+Read AGENTS.md, docs/ai-project-sop.md, and docs/project-brief.md.
 Create a spec for the first build slice if decisions need to be surfaced.
 Otherwise create a small task plan for the first vertical slice.
 Do not implement yet.

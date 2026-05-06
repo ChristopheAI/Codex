@@ -49,6 +49,8 @@ Evidence:
 
 - Starter templates and examples cover the first AI system pattern.
 - `docs/ai-system-defaults.md` guides pattern choice before implementation.
+- AI project lessons are placed on the maturity ladder in
+  `docs/learning-intake.md` before becoming templates or rules.
 
 ## Phase 4: Production Readiness
 
@@ -60,6 +62,9 @@ Goal: make the starter kit production-minded by default.
 - Error handling and retries.
 - Evals and manual test cases.
 - Cost and latency awareness.
+- Per-client billing and ownership clarity for client work.
+- Background jobs and scheduled automations.
+- CI plus deployment smoke checks.
 
 Evidence:
 
