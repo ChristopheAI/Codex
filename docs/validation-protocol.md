@@ -47,8 +47,10 @@ Use when validating the starter kit itself.
 
 ```bash
 sh scripts/validate-starter.sh
+sh scripts/smoke-new-project.sh
 git diff --check
 sh -n scripts/new-project.sh
+sh -n scripts/smoke-new-project.sh
 sh -n scripts/validate-starter.sh
 ```
 

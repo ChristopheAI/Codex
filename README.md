@@ -22,18 +22,27 @@ build the app.
 For every new project:
 
 1. Start from this repository structure.
-2. Run `sh scripts/new-project.sh` to create the project brief, handoff file,
+2. Read `docs/ai-project-sop.md` as the operating procedure.
+3. Run `sh scripts/new-project.sh` to create the project brief, handoff file,
    validation script, and `.gitignore`.
-3. Adapt `AGENTS.md` to the project using the brief as source of truth.
-4. Write a spec when decisions matter.
-5. Use the AI system spec when the project includes LLMs, RAG, tools, or agents.
-6. Break the work into small reviewable tasks.
-7. Commit the planning docs as the project baseline.
-8. Make `sh scripts/validate.sh` prove the current task and V1 behavior.
-9. Build with Codex.
-10. Test, review, commit, and close out V1 before moving on.
+4. Adapt `AGENTS.md` to the project using the brief as source of truth.
+5. Write a spec when decisions matter.
+6. Use the AI system spec when the project includes LLMs, RAG, tools, or agents.
+7. Break the work into small reviewable tasks.
+8. Commit the planning docs as the project baseline.
+9. Make `sh scripts/validate.sh` prove the current task and V1 behavior.
+10. Build with Codex.
+11. Test, review, commit, and close out V1 before moving on.
+
+To smoke-test the starter kit by creating a temporary project, run:
+
+```bash
+sh scripts/smoke-new-project.sh
+```
 
 See [docs/new-project.md](docs/new-project.md) for the exact start sequence.
+See [docs/ai-project-sop.md](docs/ai-project-sop.md) for the compact
+agent-readable SOP to give Codex before starting a new AI or software project.
 
 ## New Thread Handoff
 
@@ -69,9 +78,13 @@ for the gap map between the five-part course and this starter kit.
 ```text
 AGENTS.md                 Base instructions for Codex
 docs/                     New-project workflow, roadmap, operating models
+docs/ai-project-sop.md    Compact SOP for starting AI/software projects in Codex
+docs/learning-intake.md   Filter for turning lessons into starter-kit changes
 docs/project-control-plane.md
                           Reusable status, handoff, validation, and production cockpit
 docs/patterns/            Reusable production and project patterns
+scripts/smoke-new-project.sh
+                          End-to-end smoke test for bootstrapping a project
 templates/                Project brief, specs, plans, review checklists
 learnings/                Supporting synthesis that improves the starter kit
 projects/                 Example or proof projects built end to end

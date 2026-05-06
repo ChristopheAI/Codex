@@ -44,10 +44,11 @@ do not create an infinite loop just to record the handoff commit itself.
 
 ## Next Recommended Action
 
-Write the next smallest safe action here. Keep it concrete enough that a new
-Codex session can continue without reconstructing chat context.
-
 `<next action>`
+
+Replace the placeholder with the next smallest safe action. Keep it concrete
+enough that a new Codex session can continue without reconstructing chat
+context.
 
 ## Control Plane
 

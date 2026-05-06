@@ -63,6 +63,7 @@ Minimum:
 ```text
 AGENTS.md
 docs/new-project.md
+docs/ai-project-sop.md
 docs/implementation-loop.md
 docs/ai-system-defaults.md
 docs/session-handoff.md
@@ -74,7 +75,9 @@ docs/codex-primitives-chooser.md
 docs/codex-skills-playbook.md
 docs/codex-automations-playbook.md
 docs/project-control-plane.md
+docs/learning-intake.md
 scripts/new-project.sh
+scripts/smoke-new-project.sh
 scripts/validate-starter.sh
 templates/project-brief.md
 templates/spec.md
@@ -112,6 +115,7 @@ small experiment, copy only what will actually be used.
 
 ```text
 new idea
+  -> read AI project SOP
   -> project brief
   -> first spec if decisions matter
   -> AI system spec if LLMs or agents are involved
@@ -145,6 +149,10 @@ new thread
 ## What Learnings Are For
 
 Learnings are inputs to the starter kit, not the main product.
+
+Use `docs/learning-intake.md` to classify each useful lesson into one primary
+reinforcement track: SOP, templates, production readiness, smoke tests, or
+feedback loop.
 
 A learning note should usually end with one of these:
 

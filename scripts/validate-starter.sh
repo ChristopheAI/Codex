@@ -6,6 +6,7 @@ README.md
 AGENTS.md
 docs/new-project.md
 docs/starter-kit.md
+docs/ai-project-sop.md
 docs/codex-app-workflow.md
 docs/codex-desktop-operating-model.md
 docs/codex-full-course-coverage.md
@@ -20,6 +21,7 @@ docs/codex-primitives-chooser.md
 docs/codex-skills-playbook.md
 docs/codex-automations-playbook.md
 docs/project-control-plane.md
+docs/learning-intake.md
 docs/patterns/private-vercel-ai-tool.md
 projects/bavast-vercel.md
 templates/project-brief.md
@@ -39,6 +41,7 @@ templates/project-validate.sh
 templates/project-verify-production.mjs
 templates/reflection.md
 scripts/new-project.sh
+scripts/smoke-new-project.sh
 scripts/validate-starter.sh
 "
 
@@ -50,6 +53,8 @@ grep -q "Codex Project Starter Kit" README.md
 grep -q "codex-desktop-operating-model.md" README.md
 grep -q "codex-full-course-coverage.md" README.md
 grep -q "Do not start with code" docs/new-project.md
+grep -q "AI Project SOP" docs/ai-project-sop.md
+grep -q "Agent Prompt Template" docs/ai-project-sop.md
 grep -q "Project Brief" templates/project-brief.md
 grep -q "Codex Desktop Operating Model" docs/codex-desktop-operating-model.md
 grep -q "Access vs Workflow" docs/codex-desktop-operating-model.md
@@ -62,6 +67,8 @@ grep -q "Codex Primitives Chooser" docs/codex-primitives-chooser.md
 grep -q "Codex Skills Playbook" docs/codex-skills-playbook.md
 grep -q "Codex Automations Playbook" docs/codex-automations-playbook.md
 grep -q "Project Control Plane" docs/project-control-plane.md
+grep -q "Five Reinforcement Tracks" docs/learning-intake.md
+grep -q "AI Engineer Maturity Ladder" docs/learning-intake.md
 grep -q "Private Vercel AI Tool Pattern" docs/patterns/private-vercel-ai-tool.md
 grep -q "Bavast Vercel Case Study" projects/bavast-vercel.md
 grep -q "private Vercel AI tool" projects/README.md
@@ -101,5 +108,6 @@ grep -q "templates/project-verify-production.mjs" scripts/new-project.sh
 grep -q "templates/github-actions-ci.yml" scripts/new-project.sh
 grep -q "templates/project-session-handoff.md" scripts/new-project.sh
 grep -q "templates/project-gitignore" scripts/new-project.sh
+grep -q "New project smoke test passed" scripts/smoke-new-project.sh
 
 echo "Starter kit validation passed"
