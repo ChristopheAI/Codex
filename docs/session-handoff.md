@@ -24,40 +24,49 @@ For AI systems, also use:
 
 - `docs/ai-system-defaults.md`
 - `templates/ai-system-spec.md`
+- `docs/ai-project-sop.md`
+- `docs/learning-intake.md`
 
 ## Latest Durable Checkpoint
 
 Update this section at the end of meaningful sessions. Always verify exact
 commit state with `git status --short --branch` and `git log --oneline`.
 
-- Latest pushed branch: `origin/main`
-- Latest pushed commit:
-  - `1d93cd8 docs: update course coverage handoff`
+- Current branch: `codex/operating-base-sop`
+- Latest pushed branch before this publishing flow: `origin/main`
 - Latest meaningful local checkpoint before this handoff update:
-  - `21234b0 docs: rename workflow to codex operating base`
-- Active project or experiment: local workspace renamed from
-  `Maximize Codex` to `Codex Operating Base`.
+  - `147fe18 docs: add operating base SOP workflow`
+- Active project or experiment: Codex Operating Base now has an agent-readable
+  SOP workflow, a learning-intake filter, and a new-project smoke test.
 - What was validated:
-  - Renamed local repo folder to
-    `/Users/christophe/Projects/Codex Operating Base`.
-  - Confirmed `/Users/christophe/Projects/Maximize Codex` no longer exists and
-    the new folder contains the Git repo.
-  - Confirmed `HEAD` still matches `origin/main` before the doc rename.
-  - Updated `docs/codex-desktop-operating-model.md` so the workflow name matches
-    Codex Operating Base.
-  - Confirmed there are no remaining outdated `Maximize Codex` or old absolute
-    path references outside this handoff note.
-  - Fresh checks for the workspace rename:
-    - `git diff --check`
+  - Added `docs/ai-project-sop.md` as the compact standard operating procedure
+    for starting AI/software projects with Codex App.
+  - Added `docs/learning-intake.md` to route Skool/Owain/Codex insights through
+    five reinforcement tracks: SOP, templates, production readiness, smoke
+    tests, and feedback loop.
+  - Added `scripts/smoke-new-project.sh` to bootstrap a temporary project,
+    fill a minimal planning baseline, update handoff, and verify that
+    `node scripts/project-status.mjs` can resume from repository files.
+  - Updated README, starter workflow, validation protocol, roadmap, starter
+    validation, and project handoff template to include the SOP/intake/smoke
+    workflow.
+  - Fresh checks:
     - `sh scripts/validate-starter.sh`
+    - `sh scripts/smoke-new-project.sh`
+    - `git diff --check`
+    - `sh -n scripts/new-project.sh`
+    - `sh -n scripts/smoke-new-project.sh`
+    - `sh -n scripts/validate-starter.sh`
 - Known gaps:
-  - `21234b0` and this handoff update are local until intentionally pushed.
-  - GitHub repository URL remains `https://github.com/ChristopheAI/Codex.git`;
-    only the local workspace folder was renamed.
+  - The SOP/intake work is being published from
+    `codex/operating-base-sop`; it is not merged to `main` yet.
+  - Production readiness is still a documented track, not yet a full dedicated
+    production AI SOP.
   - No active user-defined markers are currently documented.
 - Next recommended action:
-  - Push the Codex Operating Base rename commits to `origin/main`.
-  - Keep validating from a fresh clone after each starter-kit workflow change.
+  - Push `codex/operating-base-sop` and open a draft PR.
+  - Review whether `templates/ai-system-spec.md` should be strengthened next
+    for evals, monitoring, and production operations.
 
 ## Active Context Markers
 
@@ -75,7 +84,8 @@ Do not assume a UUID is a git commit. Resolve it using this file,
 
 ```text
 Read AGENTS.md, docs/session-handoff.md, docs/validation-protocol.md,
-docs/starter-kit.md, and the latest git log.
+docs/ai-project-sop.md, docs/learning-intake.md, docs/starter-kit.md, and the
+latest git log.
 
 Summarize:
 - the repo purpose
