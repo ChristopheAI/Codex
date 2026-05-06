@@ -33,7 +33,9 @@ Update this section at the end of meaningful sessions. Always verify exact
 commit state with `git status --short --branch` and `git log --oneline`.
 
 - Current branch: `codex/operating-base-sop`
-- Latest pushed branch before this publishing flow: `origin/main`
+- Latest pushed branch: `origin/codex/operating-base-sop`
+- Draft PR:
+  - `https://github.com/ChristopheAI/Codex/pull/1`
 - Latest meaningful local checkpoint before this handoff update:
   - `147fe18 docs: add operating base SOP workflow`
 - Active project or experiment: Codex Operating Base now has an agent-readable
@@ -64,7 +66,7 @@ commit state with `git status --short --branch` and `git log --oneline`.
     production AI SOP.
   - No active user-defined markers are currently documented.
 - Next recommended action:
-  - Push `codex/operating-base-sop` and open a draft PR.
+  - Review draft PR `https://github.com/ChristopheAI/Codex/pull/1`.
   - Review whether `templates/ai-system-spec.md` should be strengthened next
     for evals, monitoring, and production operations.
 
